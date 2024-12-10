@@ -1,0 +1,3737 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://purple-rice-8588.animaapp.io/?v=96ae5929-1e0b-4621-be5f-7df0d8a3ad78 -->
+<html>
+  <script src="chrome-extension://pgojnojmmhpofjgdmaebadhbocahppod/assets/inject/solvedCallback.js"></script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <style type="text/css">
+      .turbo-progress-bar {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: #0076ff;
+        z-index: 9999;
+        transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+        transform: translate3d(0, 0, 0);
+      }
+    </style>
+    <style id="st_globalStyles">
+      /* MEDIA QUERIES */
+      .anima-desktop-only {
+        @media (max-width: 768px) {
+          display: none !important;
+        }
+      }
+
+      /* SCROLLBAR */
+
+      [dark-scroll]::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      [dark-scroll]::-webkit-scrollbar-track-piece {
+        background-color: #2b2b2b;
+        border: 1px solid #1d1d1d;
+      }
+
+      [dark-scroll]::-webkit-scrollbar-thumb {
+        height: 10px;
+        background-color: #4d4d4d;
+      }
+      [dark-scroll]::-webkit-scrollbar-thumb:hover {
+        background-color: #5a5a5a;
+      }
+
+      /* LOAD PROGRESS */
+
+      .turbolinks-progress-bar {
+        height: 3px;
+        background-color: #ff6250;
+      }
+
+      /* GROUPING */
+
+      [data-id].ui-selecting {
+        box-shadow: inset 0 0 0 1px #4285f4 !important;
+      }
+      [data-id].ui-selected {
+        box-shadow: inset 0 0 0 1px #4285f4 !important;
+      }
+
+      /* CURSOR */
+
+      body[mode="comments"] * {
+        cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00LjkxNjQ4IDIzLjQxMDlDNS40OTE1MyAyMi45ODg3IDUuOTMxNzkgMjIuMzkzNSA2LjIzMjggMjEuNjQwN0M0Ljc5MDY5IDE5LjczODMgNCAxNy4zOTMzIDQgMTQuOTk3NUM0IDguOTM0MSA4LjkzMjgyIDQgMTUuMDAyMiA0QzIxLjA3MTcgNCAyNiA4LjkzOTE5IDI2IDE1LjAwMjVDMjYgMjEuMDY1OSAyMS4wNjcyIDI2IDE0Ljk5NzggMjZDMTIuOTg5NiAyNiAxMS4wMzUzIDI1LjQ1NTcgOS4zMjM2NyAyNC40MjMxQzguNDI5NjUgMjQuOTU3MiA3LjQxNDM0IDI1LjIyNjggNi4zMDAxOCAyNS4yMjY4QzUuOTU0MjYgMjUuMjI2OCA1LjU5OTM1IDI1LjIwMTQgNS4yNTM0MiAyNS4xNDU0QzQuOTAzIDI1LjA4OTUgNC42Mjg5NiAyNC44MDQ2IDQuNTUyNTggMjQuNDE4QzQuNDc2MjEgMjQuMDI2NCA0LjYxOTk3IDIzLjYyOTYgNC45MTY0OCAyMy40MTA5WiIgZmlsbD0iI0ZGNjI1MCIvPgo8L3N2Zz4K")
+            0 24,
+          auto !important;
+      }
+
+      body[mode="code"] [data-id]:not(.hidden) {
+        cursor: default;
+      }
+
+      /* default node state */
+
+      body[mode="code"] [data-id]:not(.hidden),
+      body[mode="comments"] [data-id]:not(.hidden) {
+        pointer-events: all;
+      }
+
+      /* is_image */
+
+      body[mode="code"] [data-id].is_image [data-id],
+      body[mode="comments"] [data-id].is_image [data-id] {
+        pointer-events: none !important;
+      }
+
+      /* without a data-id or ignored */
+
+      [data-id].ignore,
+      body[mode="code"] *:not([data-id]) {
+        pointer-events: none !important;
+      }
+      /* disable transforms for ignored elements */
+
+      body[mode="code"] [data-id]:hover {
+        transform: none !important;
+      }
+
+      /* ANIMA BUTTONS */
+      .an-button {
+        position: relative;
+        height: 28px;
+        padding: 0 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        transition-property: all;
+        transition-duration: 100ms;
+        appearance: none;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s ease;
+        border-width: 0;
+      }
+
+      .an-button > div {
+        width: 100%;
+      }
+
+      .an-button.primary {
+        background: #ff6250;
+        color: #ffffff;
+      }
+
+      .an-button.primary:hover:not(:disabled) {
+        background: #e2412e;
+      }
+
+      .an-button.secondary {
+        background: transparent;
+        border: 1px solid #ff6250;
+        color: #ff6250;
+      }
+
+      .an-button.secondary:hover:not(:disabled) {
+        color: #ffffff;
+        background: #ff6250;
+      }
+
+      .an-button.rounded {
+        border-radius: 100px;
+      }
+
+      .an-button:disabled {
+        opacity: 0.5;
+      }
+
+      .an-button:disabled {
+        cursor: default;
+      }
+
+      .an-button:active,
+      .an-button:focus {
+        outline: none;
+      }
+    </style>
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://animaproject.s3.amazonaws.com/home/favicon.png"
+    />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <script
+      id="anima-load-script"
+      src="./purple-rice-8588.animaapp.io_files/load.js.tải xuống"
+    ></script>
+    <capsolver-widgets></capsolver-widgets>
+    <script
+      id="anima-hotspots-script"
+      src="./purple-rice-8588.animaapp.io_files/hotspots.js.tải xuống"
+    ></script>
+    <style id="hotspots-styles">
+      .hotspot {
+        position: absolute;
+        border: 1px solid #2a9fd8;
+        background: rgba(0, 173, 255, 0.54);
+        opacity: 0;
+        z-index: -1;
+        pointer-events: none;
+      }
+    </style>
+    <style id="hide-styles">
+      .hotspot {
+        display: none !important;
+      }
+    </style>
+    <script
+      id="s_turbo"
+      src="./purple-rice-8588.animaapp.io_files/turbo.es2017-umd.js.tải xuống"
+    ></script>
+    <script
+      id="anima-overrides-script"
+      src="./purple-rice-8588.animaapp.io_files/overrides.js.tải xuống"
+    ></script>
+    <script src="./purple-rice-8588.animaapp.io_files/timeline.js.tải xuống"></script>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+      @import url("https://fonts.googleapis.com/css?family=Poppins:900,200,700,500,400");
+
+      @font-face {
+        font-family: "Tahoma-Regular";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://anima-uploads.s3.amazonaws.com/projects/654b617bb0eef6031e715d89/fonts/tahoma.ttf")
+          format("truetype");
+      }
+
+      @font-face {
+        font-family: "Post No Bills Jaffna ExtraBold-Regular";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://anima-uploads.s3.amazonaws.com/projects/63a233d86eb4381ce7f333fd/fonts/sticknobills-extrabold.ttf")
+          format("truetype");
+      }
+
+      @font-face {
+        font-family: "Arial-Bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url("https://anima-uploads.s3.amazonaws.com/projects/673fe060bc2db07f0203dda5/fonts/ariblk.ttf")
+          format("truetype");
+      }
+      /* The following line is used to measure usage of this code. You can remove it if you want. */
+      @import url("https://px.animaapp.com/672ae69fd15fa5a48aa0a5f3.672ae69fd15fa5a48aa0a5f6.6ycNaaO.hch.png");
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .component-wrapper a {
+        display: contents;
+        pointer-events: auto;
+        text-decoration: none;
+      }
+
+      .component-wrapper * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe {
+        pointer-events: auto;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .screen a {
+        display: contents;
+        text-decoration: none;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .container-center-vertical > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+      }
+
+      .container-center-horizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        pointer-events: none;
+        width: 100%;
+      }
+
+      .container-center-horizontal > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+      }
+
+      .auto-animated div {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .auto-animated input {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay-base {
+        display: none;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .overlay-base.animate-appear {
+        align-items: center;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+      }
+
+      .overlay-base.animate-disappear {
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+        display: block;
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      .overlay-base.animate-disappear * {
+        pointer-events: none;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+
+      .align-self-flex-center {
+        align-self: flex-center;
+      }
+
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --black: #000000;
+        --mine-shaft: #333333;
+        --mine-shaft-2: #333333ad;
+        --sonic-silver: #767676;
+        --thunderbird: #bc1919;
+        --white: #ffffff;
+
+        --font-size-l: 33px;
+        --font-size-m: 30px;
+        --font-size-s: 28px;
+        --font-size-xl: 36px;
+        --font-size-xxl: 40px;
+        --font-size-xxxl: 60px;
+        --font-size-xxxxl: 90px;
+
+        --font-family-arial-bold: "Arial-Bold", Helvetica;
+        --font-family-poppins: "Poppins", Helvetica;
+        --font-family-post_no_bills_jaffna_extrabold-regular: "Post No Bills Jaffna ExtraBold-Regular",
+          Helvetica;
+        --font-family-tahoma-regular: "Tahoma-Regular", Helvetica;
+      }
+      .poppins-normal-white-40px {
+        color: var(--white);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .poppins-bold-white-36px {
+        color: var(--white);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .poppins-normal-mine-shaft-32px {
+        color: var(--mine-shaft);
+        font-family: var(--font-family-poppins);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .poppins-bold-thunderbird-60px {
+        color: var(--thunderbird);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .poppins-medium-white-40px {
+        color: var(--white);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .poppins-medium-white-28px {
+        color: var(--white);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .poppins-bold-black-90px {
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .poppins-medium-black-33px {
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .poppins-bold-sonic-silver-30px {
+        color: var(--sonic-silver);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      :root {
+      }
+
+      /* screen - offer-pc */
+
+      .offer-pc {
+        background-color: var(--white);
+        height: 10055px;
+        overflow: hidden;
+        overflow-x: hidden;
+        position: relative;
+        width: 1920px;
+      }
+
+      .offer-pc .vector-G01i6o {
+        height: 60px;
+        left: 32px;
+        top: 119px;
+        width: 16px;
+      }
+
+      .offer-pc .content-footer-G01i6o {
+        background-color: transparent;
+        height: 1512px;
+        left: -21px;
+        position: absolute;
+        top: 8543px;
+        width: 1945px;
+      }
+
+      .offer-pc .rectangle-75-zuRgNC {
+        background-color: #ff0404;
+        height: 47px;
+        left: 0px;
+        position: absolute;
+        top: 1465px;
+        width: 1941px;
+      }
+
+      .offer-pc .thanh-cun-hin-th-ngy-gi-v-v-tr-hin-ti-zuRgNC {
+        background-color: transparent;
+        color: var(--white);
+        font-family: var(--font-family-tahoma-regular);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 400;
+        height: 39px;
+        left: 498px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 1473px;
+        white-space: nowrap;
+        width: 796px;
+      }
+
+      .offer-pc .car-breezy-2024-all-rights-reserved-zuRgNC {
+        background-color: transparent;
+        color: transparent;
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 604px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 1381px;
+        width: 725px;
+      }
+
+      .offer-pc .span0-xq4Dn7 {
+        color: var(--thunderbird);
+        font-style: normal;
+      }
+
+      .offer-pc .span1-xq4Dn7 {
+        color: #000000cc;
+        font-style: normal;
+      }
+
+      .offer-pc .line-5-zuRgNC {
+        background-color: transparent;
+        height: 1px;
+        left: 109px;
+        object-fit: cover;
+        position: absolute;
+        top: 1347px;
+        width: 1683px;
+      }
+
+      .offer-pc .group-31-zuRgNC {
+        background-color: transparent;
+        height: 391px;
+        left: 87px;
+        position: absolute;
+        top: 912px;
+        width: 754px;
+      }
+
+      .offer-pc .group-17-5PgCYx {
+        background-color: transparent;
+        height: 148px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 316px;
+      }
+
+      .offer-pc .x0e9e966f2868e68cf5fa-v9NcuV {
+        background-color: transparent;
+        height: 148px;
+        left: 0px;
+        object-fit: cover;
+        position: absolute;
+        top: 0px;
+        width: 79px;
+      }
+
+      .offer-pc .car-breezy-v9NcuV {
+        color: #c30f3f;
+        font-family: var(--font-family-post_no_bills_jaffna_extrabold-regular);
+        font-size: 45px;
+        font-weight: 400;
+        left: 87px;
+        letter-spacing: 0px;
+        top: 42px;
+        width: 227px;
+      }
+
+      .offer-pc .with-the-motto-of-br-5PgCYx {
+        background-color: transparent;
+        color: #333333cc;
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 9px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 154px;
+        width: 743px;
+      }
+
+      .offer-pc .bxl-facebook-circle-1-5PgCYx {
+        background-color: transparent;
+        height: 74px;
+        left: 0px;
+        position: absolute;
+        top: 314px;
+        width: 70px;
+      }
+
+      .offer-pc .bxl-instagram-alt-1-5PgCYx {
+        background-color: transparent;
+        height: 80px;
+        left: 95px;
+        position: absolute;
+        top: 311px;
+        width: 76px;
+      }
+
+      .offer-pc .bxl-twitter-1-5PgCYx {
+        background-color: transparent;
+        height: 74px;
+        left: 201px;
+        position: absolute;
+        top: 314px;
+        width: 70px;
+      }
+
+      .offer-pc .bxl-youtube-1-5PgCYx {
+        background-color: transparent;
+        height: 80px;
+        left: 305px;
+        position: absolute;
+        top: 311px;
+        width: 76px;
+      }
+
+      .offer-pc .group-32-zuRgNC {
+        background-color: transparent;
+        height: 1301px;
+        left: 900px;
+        position: absolute;
+        top: 0px;
+        width: 896px;
+      }
+
+      .offer-pc .page-ixNIcN {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 500;
+        height: auto;
+        left: 8px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 933px;
+        width: 116px;
+      }
+
+      .offer-pc .contact-us-ixNIcN {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 500;
+        height: auto;
+        left: 383px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 933px;
+        width: 251px;
+      }
+
+      .offer-pc .group-26-ixNIcN {
+        background-color: transparent;
+        height: 50px;
+        left: 383px;
+        position: absolute;
+        top: 1058px;
+        width: 509px;
+      }
+
+      .offer-pc .bx-search-1-yqzlhF {
+        height: 40px;
+        top: 8px;
+        width: 50px;
+      }
+
+      .offer-pc .group-22-yqzlhF {
+        background-color: transparent;
+        height: 50px;
+        left: 68px;
+        position: absolute;
+        top: 0px;
+        width: 443px;
+      }
+
+      .offer-pc .carbreezy-cargmailcom-41lGTK {
+        background-color: transparent;
+        height: 50px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: 441px;
+      }
+
+      .offer-pc .group-27-ixNIcN {
+        background-color: transparent;
+        height: 51px;
+        left: 383px;
+        position: absolute;
+        top: 1155px;
+        width: 411px;
+      }
+
+      .offer-pc .bx-search-1-aaRnyZ {
+        height: 50px;
+        top: 0px;
+        width: 50px;
+      }
+
+      .offer-pc .group-22-aaRnyZ {
+        background-color: transparent;
+        height: 48px;
+        left: 71px;
+        position: absolute;
+        top: 3px;
+        width: 342px;
+      }
+
+      .offer-pc .hotline0825-355-355-xIDvBJ {
+        background-color: transparent;
+        color: var(--white);
+        font-family: var(--font-family-poppins);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        height: 48px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: 340px;
+      }
+
+      .offer-pc .span0-xE1UqZ {
+        font-style: normal;
+      }
+
+      .offer-pc .span1-xE1UqZ {
+        font-style: normal;
+        text-decoration: underline;
+      }
+
+      .offer-pc .group-25-ixNIcN {
+        background-color: transparent;
+        height: 56px;
+        left: 0px;
+        position: absolute;
+        top: 1245px;
+        width: 204px;
+      }
+
+      .offer-pc .bx-search-1-kFrx4E {
+        height: 55px;
+        top: 1px;
+        width: 55px;
+      }
+
+      .offer-pc .group-22-kFrx4E {
+        background-color: transparent;
+        height: 50px;
+        left: 24px;
+        position: absolute;
+        top: 0px;
+        width: 182px;
+      }
+
+      .offer-pc .about-ihxbFD {
+        background-color: transparent;
+        height: 50px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: 180px;
+      }
+
+      .offer-pc .group-30-ixNIcN {
+        background-color: transparent;
+        height: 1188px;
+        left: 6px;
+        position: absolute;
+        top: 0px;
+        width: 183px;
+      }
+
+      .offer-pc .faq-hbfjDT {
+        height: 24px;
+        left: 1px;
+        text-align: center;
+        top: 1163px;
+        white-space: nowrap;
+        width: 180px;
+      }
+
+      .offer-pc .vector-hbfjDT {
+        height: 36px;
+        left: 0px;
+        top: 0px;
+        width: 41px;
+      }
+
+      .offer-pc .group-29-ixNIcN {
+        background-color: transparent;
+        height: 51px;
+        left: 3px;
+        position: absolute;
+        top: 1063px;
+        width: 209px;
+      }
+
+      .offer-pc .group-23-BqxlEE {
+        background-color: transparent;
+        height: 50px;
+        left: 29px;
+        position: absolute;
+        top: 1px;
+        width: 180px;
+      }
+
+      .offer-pc .group-22-Tbzdxx {
+        background-color: transparent;
+        height: 50px;
+        left: 0px;
+        position: relative;
+        top: 0px;
+        width: 182px;
+      }
+
+      .offer-pc .search-H6hJMH {
+        background-color: transparent;
+        height: 50px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: 180px;
+      }
+
+      .offer-pc .frame-BqxlEE {
+        height: 50px;
+        left: 0px;
+        top: 0px;
+        width: 50px;
+      }
+
+      .offer-pc .frame-G01i6o {
+        height: 300px;
+        left: 1281px;
+        top: 3738px;
+        width: 300px;
+      }
+
+      .offer-pc .water-1-G01i6o {
+        background-color: transparent;
+        height: 400px;
+        left: 273px;
+        object-fit: cover;
+        position: absolute;
+        top: 3688px;
+        width: 400px;
+      }
+
+      .offer-pc .rectangle-178-G01i6o {
+        background-color: #f5f5f5;
+        height: 857px;
+        left: -3px;
+        position: absolute;
+        top: 1437px;
+        width: 1930px;
+      }
+
+      .offer-pc .rectangle-180-G01i6o {
+        background-color: #f5f5f5;
+        height: 857px;
+        left: -3px;
+        position: absolute;
+        top: 3239px;
+        width: 1930px;
+      }
+
+      .offer-pc .x4d9297ee3421d30b02b93b2f4f1a722a-1-G01i6o {
+        background-color: transparent;
+        height: 878px;
+        left: -3px;
+        object-fit: cover;
+        position: absolute;
+        top: 127px;
+        width: 1923px;
+      }
+
+      .offer-pc .frame-12-G01i6o {
+        background-color: #00000052;
+        height: 887px;
+        left: 1px;
+        overflow: hidden;
+        position: absolute;
+        top: 118px;
+        width: 1919px;
+      }
+
+      .offer-pc .discover-unbeatable-ggDxWb {
+        background-color: transparent;
+        height: auto;
+        left: 322px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 124px;
+        width: 1342px;
+      }
+
+      .offer-pc .welcome-to-offers-of-car-ggDxWb {
+        background-color: transparent;
+        color: var(--white);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 577px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 192px;
+        width: auto;
+      }
+
+      .offer-pc .group-92-ggDxWb {
+        background-color: transparent;
+        height: 97px;
+        left: 811px;
+        position: absolute;
+        top: 308px;
+        width: 319px;
+      }
+
+      .offer-pc .rectangle-177-DbaEEZ {
+        height: 97px;
+        left: 0px;
+        top: 0px;
+        width: 317px;
+      }
+
+      .offer-pc .see-now-DbaEEZ {
+        color: var(--black);
+        font-size: 50px;
+        font-weight: 700;
+        height: auto;
+        left: 53px;
+        text-align: left;
+        top: 11px;
+        width: auto;
+      }
+
+      .offer-pc .group-95-G01i6o {
+        background-color: transparent;
+        height: 129px;
+        left: 1254px;
+        position: absolute;
+        top: 1996px;
+        width: 319px;
+      }
+
+      .offer-pc .rectangle-177-p5Fr11 {
+        height: 129px;
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .view-details-G01i6o {
+        left: 1300px;
+        top: 2032px;
+      }
+
+      .offer-pc .group-94-G01i6o {
+        background-color: transparent;
+        height: 135px;
+        left: 402px;
+        position: absolute;
+        top: 1169px;
+        width: 1117px;
+      }
+
+      .offer-pc .group-93-dxXPtp {
+        height: 90px;
+        top: 45px;
+        width: 1119px;
+      }
+
+      .offer-pc .title-JQOqVJ {
+        background-color: transparent;
+        height: 90px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        white-space: nowrap;
+        width: 1117px;
+      }
+
+      .offer-pc .line-16-dxXPtp {
+        left: 447px;
+      }
+
+      .offer-pc .group-101-G01i6o {
+        background-color: transparent;
+        height: 196px;
+        left: 223px;
+        position: absolute;
+        top: 6023px;
+        width: 1440px;
+      }
+
+      .offer-pc .group-93-WTp4vG {
+        height: 70px;
+        top: 126px;
+        width: 1442px;
+      }
+
+      .offer-pc .drive-confidently-wi-Z17KqV {
+        background-color: transparent;
+        color: transparent;
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxxxl);
+        font-style: normal;
+        font-weight: 700;
+        height: 70px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        white-space: nowrap;
+        width: 1440px;
+      }
+
+      .offer-pc .span0-3S0b75 {
+        font-style: normal;
+      }
+
+      .offer-pc .span1-3S0b75 {
+        color: var(--thunderbird);
+        font-style: normal;
+      }
+
+      .offer-pc .span2-3S0b75 {
+        font-style: normal;
+      }
+
+      .offer-pc .line-16-WTp4vG {
+        left: 607px;
+      }
+
+      .offer-pc .x6b21242ad07904e60d29d22fdbbdead4-1-G01i6o {
+        background-color: transparent;
+        height: 623px;
+        left: 84px;
+        object-fit: cover;
+        position: absolute;
+        top: 1527px;
+        width: 897px;
+      }
+
+      .offer-pc .suv-c-learance-sale-G01i6o {
+        color: var(--black);
+        height: 127px;
+        left: 1049px;
+        top: 1558px;
+        width: 764px;
+      }
+
+      .offer-pc .explore-our-incredib-G01i6o {
+        height: 313px;
+        left: 1008px;
+        top: 1675px;
+        width: 839px;
+      }
+
+      .offer-pc .x32388f5c1cce1b088e6a4f789f87e163-1-G01i6o {
+        background-color: transparent;
+        height: 882px;
+        left: 2px;
+        object-fit: cover;
+        position: absolute;
+        top: 2357px;
+        width: 1920px;
+      }
+
+      .offer-pc .x57c4ef37e693842453ff19129ff9a07a-1-G01i6o {
+        background-color: transparent;
+        height: 857px;
+        left: -3px;
+        object-fit: cover;
+        position: absolute;
+        top: 3309px;
+        width: 1923px;
+      }
+
+      .offer-pc .group-100-G01i6o {
+        background-color: transparent;
+        height: 415px;
+        left: 47px;
+        position: absolute;
+        top: 2420px;
+        width: 788px;
+      }
+
+      .offer-pc .rectangle-177-lfAMLD {
+        height: 118px;
+        left: 245px;
+        top: 297px;
+        width: 292px;
+      }
+
+      .offer-pc .buy-now-lfAMLD {
+        background-color: transparent;
+        height: auto;
+        left: 304px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 331px;
+        width: auto;
+      }
+
+      .offer-pc .suv-c-learance-sale-lfAMLD {
+        color: var(--black);
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 782px;
+      }
+
+      .offer-pc .explore-our-incredib-lfAMLD {
+        height: 285px;
+        left: 7px;
+        top: 40px;
+        width: 768px;
+      }
+
+      .offer-pc .group-98-G01i6o {
+        left: 1479px;
+        top: 3628px;
+        width: 319px;
+      }
+
+      .offer-pc .rectangle-177-ih5ljn {
+        height: 129px;
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .view-details-oC6npz {
+        left: 1525px;
+        top: 3664px;
+      }
+
+      .offer-pc .suv-c-learance-sale-oC6npz {
+        color: var(--white);
+        height: 127px;
+        left: 580px;
+        top: 3364px;
+        width: 764px;
+      }
+
+      .offer-pc .explore-our-incredib-oC6npz {
+        height: 232px;
+        left: 540px;
+        top: 3462px;
+        width: 839px;
+      }
+
+      .offer-pc .rectangle-188-G01i6o {
+        background-color: #d9d9d9;
+        height: 693px;
+        left: 52px;
+        position: absolute;
+        top: 4440px;
+        width: 1099px;
+      }
+
+      .offer-pc .x8da90627be8ea76e52d0367bc21018f4-2-G01i6o {
+        background-color: transparent;
+        height: 696px;
+        left: 52px;
+        object-fit: cover;
+        position: absolute;
+        top: 4437px;
+        width: 1099px;
+      }
+
+      .offer-pc .x93d9132a0460c0498fb006c6a24dfdfa-1-G01i6o {
+        background-color: transparent;
+        height: 693px;
+        left: 732px;
+        object-fit: cover;
+        position: absolute;
+        top: 5172px;
+        width: 1138px;
+      }
+
+      .offer-pc .mbi-insured-customer-G01i6o {
+        background-color: transparent;
+        color: var(--sonic-silver);
+        font-family: var(--font-family-arial-bold);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+        height: 180px;
+        left: 182px;
+        letter-spacing: 0px;
+        line-height: 18.6px;
+        position: absolute;
+        text-align: left;
+        top: 7021px;
+        width: 649px;
+      }
+
+      .offer-pc .engine-hydrolock-G01i6o {
+        background-color: transparent;
+        height: auto;
+        left: 223px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 6907px;
+        width: auto;
+      }
+
+      .offer-pc .extended-warranty-G01i6o {
+        background-color: transparent;
+        height: auto;
+        left: 1138px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 6907px;
+        width: auto;
+      }
+
+      .offer-pc .special-tires-G01i6o {
+        left: 285px;
+      }
+
+      .offer-pc .special-tires-oC6npz {
+        left: 1243px;
+      }
+
+      .offer-pc .wheel-1-G01i6o {
+        background-color: transparent;
+        height: 500px;
+        left: 230px;
+        object-fit: cover;
+        position: absolute;
+        top: 7230px;
+        width: 500px;
+      }
+
+      .offer-pc .x2-tires-free-tire-re-G01i6o {
+        background-color: transparent;
+        height: auto;
+        left: 182px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 7823px;
+        width: 670px;
+      }
+
+      .offer-pc .x1-year-renewal-packa-G01i6o {
+        background-color: transparent;
+        height: auto;
+        left: 1098px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 7021px;
+        width: auto;
+      }
+
+      .offer-pc .baohiem-1-G01i6o {
+        background-color: transparent;
+        height: 500px;
+        left: 1188px;
+        object-fit: cover;
+        position: absolute;
+        top: 7230px;
+        width: 500px;
+      }
+
+      .offer-pc .auto-insurance-progr-G01i6o {
+        background-color: transparent;
+        height: auto;
+        left: 1098px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 7811px;
+        width: 640px;
+      }
+
+      .offer-pc .frame-oC6npz {
+        height: 300px;
+        left: 1288px;
+        top: 6482px;
+        width: 300px;
+      }
+
+      .offer-pc .water-2-G01i6o {
+        background-color: transparent;
+        height: 400px;
+        left: 290px;
+        object-fit: cover;
+        position: absolute;
+        top: 6432px;
+        width: 400px;
+      }
+
+      .offer-pc .group-107-G01i6o {
+        height: 697px;
+        left: 46px;
+        top: 5172px;
+        width: 658px;
+      }
+
+      .offer-pc .x2fd41bf464157e85ff7d9c2628e66bee-1-kjHfSh {
+        background-color: transparent;
+        height: 693px;
+        left: 0px;
+        object-fit: cover;
+        position: absolute;
+        top: 0px;
+        width: 658px;
+      }
+
+      .offer-pc .frame-15-kjHfSh {
+        height: 697px;
+        position: absolute;
+        width: 656px;
+      }
+
+      .offer-pc .group-106-TP6ijm {
+        height: 3822px;
+        left: 113px;
+        top: 111px;
+        width: 1583px;
+      }
+
+      .offer-pc .trucks-rSFxLi {
+        background-color: transparent;
+        height: 60px;
+        left: 149px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: auto;
+      }
+
+      .offer-pc .group-105-rSFxLi {
+        height: 3475px;
+        left: 56px;
+        top: 347px;
+        width: 1525px;
+      }
+
+      .offer-pc .group-110-xwBOvQ {
+        background-color: transparent;
+        height: 632px;
+        left: 951px;
+        position: absolute;
+        top: 2843px;
+        width: 572px;
+      }
+
+      .offer-pc .group-63-s3WDtL {
+        height: 632px;
+        position: absolute;
+        top: 0px;
+        width: 572px;
+      }
+
+      .offer-pc .nb-car-fPD7kI {
+        height: 632px;
+        width: 572px;
+      }
+
+      .offer-pc .nb-item1-xcb4s9 {
+        height: 310px;
+        left: 0px;
+        top: 0px;
+        width: 183px;
+      }
+
+      .offer-pc .hnh-xe-nb-SF3L9Z {
+        height: 144px;
+        left: -13208px;
+        top: -4098px;
+        width: 183px;
+      }
+
+      .offer-pc .rectangle-43-SF3L9Z {
+        height: 178px;
+        top: 132px;
+        width: 183px;
+      }
+
+      .offer-pc .nb-item1-pXEJ3e {
+        height: 310px;
+        left: 194px;
+        top: -0px;
+        width: 183px;
+      }
+
+      .offer-pc .hnh-xe-nb-rnpjAZ {
+        height: 144px;
+        left: -13208px;
+        top: -4098px;
+        width: 183px;
+      }
+
+      .offer-pc .rectangle-43-rnpjAZ {
+        height: 178px;
+        top: 132px;
+        width: 183px;
+      }
+
+      .offer-pc .nb-item1-xBCGSA {
+        height: 310px;
+        left: 389px;
+        top: -0px;
+        width: 183px;
+      }
+
+      .offer-pc .hnh-xe-nb-7vJWlT {
+        height: 144px;
+        left: -13208px;
+        top: -4098px;
+        width: 183px;
+      }
+
+      .offer-pc .rectangle-43-7vJWlT {
+        height: 178px;
+        top: 132px;
+        width: 183px;
+      }
+
+      .offer-pc .nb-item1-R5NzQf {
+        height: 310px;
+        left: 389px;
+        top: 322px;
+        width: 183px;
+      }
+
+      .offer-pc .hnh-xe-nb-xxiizU {
+        height: 144px;
+        left: -13208px;
+        top: -4098px;
+        width: 183px;
+      }
+
+      .offer-pc .rectangle-43-xxiizU {
+        height: 178px;
+        top: 132px;
+        width: 183px;
+      }
+
+      .offer-pc .nb-item1-Yy4gGC {
+        height: 310px;
+        left: 194px;
+        top: 322px;
+        width: 183px;
+      }
+
+      .offer-pc .hnh-xe-nb-keNYMG {
+        height: 144px;
+        left: -13208px;
+        top: -4098px;
+        width: 183px;
+      }
+
+      .offer-pc .rectangle-43-keNYMG {
+        height: 178px;
+        top: 132px;
+        width: 183px;
+      }
+
+      .offer-pc .nb-item1-PAVxZx {
+        height: 310px;
+        left: 0px;
+        top: 322px;
+        width: 183px;
+      }
+
+      .offer-pc .hnh-xe-nb-KiSYbr {
+        height: 144px;
+        left: -13208px;
+        top: -4098px;
+        width: 183px;
+      }
+
+      .offer-pc .rectangle-43-KiSYbr {
+        height: 178px;
+        top: 132px;
+        width: 183px;
+      }
+
+      .offer-pc .frame-14-s3WDtL {
+        background-color: #3333334c;
+        border-radius: 20px;
+        height: 632px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        width: 572px;
+      }
+
+      .offer-pc .group-98-xwBOvQ {
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .rectangle-177-QCbZnk {
+        height: 129px;
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .check-trucks-xwBOvQ {
+        background-color: transparent;
+        height: auto;
+        left: 33px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 38px;
+        width: auto;
+      }
+
+      .offer-pc .group-108-G01i6o {
+        background-color: transparent;
+        height: 697px;
+        left: 732px;
+        position: absolute;
+        top: 5172px;
+        width: 1138px;
+      }
+
+      .offer-pc .frame-15-8wcJss {
+        height: 697px;
+        position: relative;
+        width: 1138px;
+      }
+
+      .offer-pc .group-109-SNyYSX {
+        background-color: transparent;
+        height: 476px;
+        left: 235px;
+        position: relative;
+        top: 111px;
+        width: 691px;
+      }
+
+      .offer-pc .electric-vehicles-6pMeCB {
+        background-color: transparent;
+        height: 60px;
+        left: 181px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: auto;
+      }
+
+      .offer-pc .join-the-green-revol-6pMeCB {
+        background-color: transparent;
+        height: 232px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 88px;
+        width: 687px;
+      }
+
+      .offer-pc .group-105-6pMeCB {
+        height: 129px;
+        left: 93px;
+        top: 347px;
+        width: 503px;
+      }
+
+      .offer-pc .group-98-xz5LuJ {
+        left: 0px;
+        top: 0px;
+        width: 501px;
+      }
+
+      .offer-pc .rectangle-177-NFxMpx {
+        height: 129px;
+        left: 0px;
+        top: 0px;
+        width: 501px;
+      }
+
+      .offer-pc .see-electric-vehicles-xz5LuJ {
+        background-color: transparent;
+        height: auto;
+        left: 59px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 38px;
+        width: auto;
+      }
+
+      .offer-pc .rectangle-176-G01i6o {
+        background-color: #f2f4fa;
+        height: 951px;
+        left: 5px;
+        position: absolute;
+        top: 8313px;
+        width: 1915px;
+      }
+
+      .offer-pc .rectangle-191-G01i6o {
+        background-color: var(--white);
+        border: 1px solid;
+        border-color: #d4d4d4;
+        border-radius: 22px;
+        height: 110px;
+        left: 85px;
+        position: absolute;
+        top: 8791px;
+        width: 781px;
+      }
+
+      .offer-pc .sign-up-to-buy-insurance-at-car-breezy-G01i6o {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 94px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 8539px;
+        width: auto;
+      }
+
+      .offer-pc .get-the-latest-deals-G01i6o {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 200;
+        height: auto;
+        left: 94px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 8631px;
+        width: 763px;
+      }
+
+      .offer-pc .rectangle-192-G01i6o {
+        background-color: var(--thunderbird);
+        border-radius: 0px 22px 22px 0px;
+        height: 110px;
+        left: 709px;
+        position: absolute;
+        top: 8791px;
+        width: 157px;
+      }
+
+      .offer-pc .register-G01i6o {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 724px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 8816px;
+        width: auto;
+      }
+
+      .offer-pc .enter-your-phone-number-G01i6o {
+        background-color: transparent;
+        color: #8f8a8a;
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 200;
+        height: auto;
+        left: 135px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 8822px;
+        width: auto;
+      }
+
+      .offer-pc .frame-17-G01i6o {
+        background-color: var(--mine-shaft-2);
+        height: 695px;
+        left: 1185px;
+        overflow: hidden;
+        position: absolute;
+        top: 4439px;
+        width: 685px;
+      }
+
+      .offer-pc .x3a230964631184047eaf9651b68af42a-1-Df2BB5 {
+        background-color: transparent;
+        height: 693px;
+        left: 0px;
+        object-fit: cover;
+        position: absolute;
+        top: 2px;
+        width: 689px;
+      }
+
+      .offer-pc .group-107-Df2BB5 {
+        height: 693px;
+        left: 0px;
+        top: 2px;
+        width: 689px;
+      }
+
+      .offer-pc .frame-15-ejjLHT {
+        height: 693px;
+        position: relative;
+        width: 689px;
+      }
+
+      .offer-pc .group-106-OVERuM {
+        height: 476px;
+        left: 130px;
+        top: 109px;
+        width: 434px;
+      }
+
+      .offer-pc .su-vs-OT2x35 {
+        background-color: transparent;
+        height: 60px;
+        left: 165px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: auto;
+      }
+
+      .offer-pc .group-105-OT2x35 {
+        height: 129px;
+        left: 56px;
+        top: 347px;
+        width: 321px;
+      }
+
+      .offer-pc .group-98-ScbFdA {
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .rectangle-177-JxEdCc {
+        height: 129px;
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .explore-su-vs-ScbFdA {
+        background-color: transparent;
+        height: auto;
+        left: 40px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 38px;
+        width: auto;
+      }
+
+      .offer-pc .frame-16-G01i6o {
+        background-color: var(--mine-shaft-2);
+        height: 695px;
+        left: 53px;
+        overflow: hidden;
+        position: absolute;
+        top: 4439px;
+        width: 1098px;
+      }
+
+      .offer-pc .sedans-jV0ool {
+        background-color: transparent;
+        height: 60px;
+        left: 520px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 152px;
+        width: auto;
+      }
+
+      .offer-pc .explore-our-wide-sel-jV0ool {
+        background-color: transparent;
+        height: 232px;
+        left: 188px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 169px;
+        width: 839px;
+      }
+
+      .offer-pc .group-105-jV0ool {
+        height: 129px;
+        left: 437px;
+        top: 417px;
+        width: 321px;
+      }
+
+      .offer-pc .group-98-SS53zz {
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .rectangle-177-rTu4OZ {
+        height: 129px;
+        left: 0px;
+        top: 0px;
+        width: 319px;
+      }
+
+      .offer-pc .view-sedans-SS53zz {
+        background-color: transparent;
+        height: auto;
+        left: 46px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 38px;
+        width: auto;
+      }
+
+      .offer-pc .rectangle-202-G01i6o {
+        background-color: var(--white);
+        border-radius: 69px;
+        height: 826px;
+        left: 1053px;
+        position: absolute;
+        top: 8374px;
+        width: 796px;
+      }
+
+      .offer-pc .line-17-G01i6o {
+        background-color: transparent;
+        height: 15px;
+        left: 1412px;
+        position: absolute;
+        top: 8430px;
+        width: 87px;
+      }
+
+      .offer-pc .special-price-on-used-cars-G01i6o {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 700;
+        height: 54px;
+        left: 1188px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 8457px;
+        width: 523px;
+      }
+
+      .offer-pc .group-56-G01i6o {
+        background-color: transparent;
+        height: 77px;
+        left: 1371px;
+        position: absolute;
+        top: 9092px;
+        width: 169px;
+      }
+
+      .offer-pc .rectangle-123-IspMS1 {
+        background-color: var(--thunderbird);
+        border-radius: 10px;
+        height: 77px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 167px;
+      }
+
+      .offer-pc .see-now-IspMS1 {
+        color: var(--white);
+        font-size: 24px;
+        font-weight: 500;
+        height: 77px;
+        left: 12px;
+        text-align: center;
+        top: 0px;
+        width: 141px;
+      }
+
+      .offer-pc .frame-18-G01i6o {
+        background-color: transparent;
+        height: 513px;
+        left: 1121px;
+        overflow: hidden;
+        position: absolute;
+        top: 8547px;
+        width: 658px;
+      }
+
+      .offer-pc .group-63-KYHrCD {
+        height: 511px;
+        position: relative;
+        top: 2px;
+        width: 658px;
+      }
+
+      .offer-pc .nb-car-cc1iNa {
+        height: 511px;
+        width: 658px;
+      }
+
+      .offer-pc .nb-item1-EdAFSx {
+        height: 250px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .hnh-xe-nb-IReSR9 {
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-43-IReSR9 {
+        height: 144px;
+        top: 107px;
+        width: 210px;
+      }
+
+      .offer-pc .nb-item1-kkeSJE {
+        height: 250px;
+        left: 223px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .hnh-xe-nb-8tjxL5 {
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-43-8tjxL5 {
+        height: 144px;
+        top: 107px;
+        width: 210px;
+      }
+
+      .offer-pc .nb-item1-GIvEkc {
+        height: 250px;
+        left: 447px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .hnh-xe-nb-thX9vl {
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-43-thX9vl {
+        height: 144px;
+        top: 107px;
+        width: 210px;
+      }
+
+      .offer-pc .nb-item1-1dc8QE {
+        height: 250px;
+        left: 448px;
+        top: 261px;
+        width: 210px;
+      }
+
+      .offer-pc .hnh-xe-nb-vYV09x {
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-43-vYV09x {
+        height: 144px;
+        top: 107px;
+        width: 210px;
+      }
+
+      .offer-pc .nb-item1-BeLBOB {
+        height: 250px;
+        left: 223px;
+        top: 261px;
+        width: 210px;
+      }
+
+      .offer-pc .hnh-xe-nb-Ysn4xa {
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-43-Ysn4xa {
+        height: 144px;
+        top: 107px;
+        width: 210px;
+      }
+
+      .offer-pc .nb-item1-4Chwt8 {
+        height: 250px;
+        left: 0px;
+        top: 261px;
+        width: 210px;
+      }
+
+      .offer-pc .hnh-xe-nb-Lpe73G {
+        height: 116px;
+        left: 0px;
+        top: 0px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-43-Lpe73G {
+        height: 144px;
+        top: 107px;
+        width: 210px;
+      }
+
+      .offer-pc .rectangle-203-G01i6o {
+        background-color: #ffffff80;
+        height: 511px;
+        left: 1119px;
+        position: absolute;
+        top: 8549px;
+        width: 660px;
+      }
+
+      .offer-pc .navbar-G01i6o {
+        background-color: transparent;
+        height: 232px;
+        left: 0px;
+        position: absolute;
+        top: -73px;
+        width: 1920px;
+      }
+
+      .offer-pc .group-55-Y6HI9y {
+        background-color: transparent;
+        height: 157px;
+        left: 0px;
+        position: absolute;
+        top: 60px;
+        width: 1920px;
+      }
+
+      .offer-pc .background-nav-j4hqvD {
+        background-color: var(--black);
+        height: 157px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 1920px;
+      }
+
+      .offer-pc .header-j4hqvD {
+        background-color: transparent;
+        height: 73px;
+        left: 373px;
+        position: absolute;
+        top: 47px;
+        width: 1484px;
+      }
+
+      .offer-pc .menu-vixWIX {
+        background-color: transparent;
+        height: 73px;
+        left: 0px;
+        position: relative;
+        top: 0px;
+        width: 1498px;
+      }
+
+      .offer-pc .newcar-66dTYL {
+        background-color: transparent;
+        height: auto;
+        left: 187px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        white-space: nowrap;
+        width: 171px;
+      }
+
+      .offer-pc .home-66dTYL {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 1px;
+        white-space: nowrap;
+        width: 170px;
+      }
+
+      .offer-pc .brands-66dTYL {
+        background-color: transparent;
+        height: auto;
+        left: 390px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 3px;
+        white-space: nowrap;
+        width: 183px;
+      }
+
+      .offer-pc .used-66dTYL {
+        background-color: transparent;
+        height: auto;
+        left: 579px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 3px;
+        white-space: nowrap;
+        width: 134px;
+      }
+
+      .offer-pc .offer-66dTYL {
+        background-color: transparent;
+        height: auto;
+        left: 734px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 1px;
+        white-space: nowrap;
+        width: 170px;
+      }
+
+      .offer-pc .faq-66dTYL {
+        height: auto;
+        left: 1405px;
+        text-align: left;
+        top: 4px;
+        width: 79px;
+      }
+
+      .offer-pc .contact-66dTYL {
+        background-color: transparent;
+        height: auto;
+        left: 1192px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 4px;
+        white-space: nowrap;
+        width: 167px;
+      }
+
+      .offer-pc .group-171-Y6HI9y {
+        background-color: transparent;
+        height: 232px;
+        left: 49px;
+        position: absolute;
+        top: 0px;
+        width: 252px;
+      }
+
+      .offer-pc .car-breezy-fooogQ {
+        color: var(--thunderbird);
+        font-family: var(--font-family-poppins);
+        font-size: 35px;
+        font-weight: 900;
+        left: 22px;
+        letter-spacing: 1.75px;
+        top: 137px;
+        width: 206px;
+      }
+
+      .offer-pc .x4452a43b90e909194eb8-fooogQ {
+        background-color: transparent;
+        height: 232px;
+        left: 0px;
+        object-fit: cover;
+        position: absolute;
+        top: 0px;
+        width: 250px;
+      }
+
+      .offer-pc .bx-search-1 {
+        background-color: transparent;
+        left: 0px;
+        position: absolute;
+      }
+
+      .offer-pc .car-breezy {
+        background-color: transparent;
+        font-style: normal;
+        height: auto;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+      }
+
+      .offer-pc .discover-the-versati {
+        background-color: transparent;
+        height: 232px;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 44px;
+        width: 430px;
+      }
+
+      .offer-pc .explore-our-incredib {
+        background-color: transparent;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+      }
+
+      .offer-pc .faq {
+        background-color: transparent;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+      }
+
+      .offer-pc .frame {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .offer-pc .frame-15 {
+        background-color: var(--mine-shaft-2);
+        left: 0px;
+        overflow: hidden;
+        top: 0px;
+      }
+
+      .offer-pc .group-105 {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .offer-pc .group-106 {
+        background-color: transparent;
+        position: relative;
+      }
+
+      .offer-pc .group-107 {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .offer-pc .group-63 {
+        background-color: transparent;
+        left: 0px;
+      }
+
+      .offer-pc .group-93 {
+        background-color: transparent;
+        left: 0px;
+        position: absolute;
+      }
+
+      .offer-pc .group-98 {
+        background-color: transparent;
+        height: 129px;
+        position: absolute;
+      }
+
+      .offer-pc .hnh-xe-nb {
+        background-color: transparent;
+        object-fit: cover;
+        position: absolute;
+      }
+
+      .offer-pc .line-16 {
+        background-color: transparent;
+        height: 20px;
+        position: absolute;
+        top: -10px;
+        width: 224px;
+      }
+
+      .offer-pc .nb-car {
+        background-color: transparent;
+        left: 0px;
+        position: relative;
+        top: 0px;
+      }
+
+      .offer-pc .nb-item1 {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .offer-pc .rectangle-177 {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .offer-pc .rectangle-43 {
+        background-color: var(--white);
+        border: 1px solid;
+        border-color: var(--black);
+        border-radius: 0px 0px 20px 20px;
+        left: 0px;
+        position: absolute;
+      }
+
+      .offer-pc .see-now {
+        background-color: transparent;
+        font-family: var(--font-family-poppins);
+        font-style: normal;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+      }
+
+      .offer-pc .special-tires {
+        background-color: transparent;
+        height: auto;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 7663px;
+        width: auto;
+      }
+
+      .offer-pc .suv-c-learance-sale {
+        background-color: transparent;
+        font-family: var(--font-family-poppins);
+        font-size: 75px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+      }
+
+      .offer-pc .vector {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .offer-pc .view-details {
+        background-color: transparent;
+        height: auto;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        width: auto;
+      }
+    </style>
+    <script
+      id="anime-js-script"
+      src="./purple-rice-8588.animaapp.io_files/anime.min.js.tải xuống"
+      integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      id="imgloaded-js-script"
+      src="./purple-rice-8588.animaapp.io_files/imagesloaded.pkgd.min.js.tải xuống"
+    ></script>
+    <style id="action-links-styles">
+      @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+      #anima-interface {
+        transition: all 0.5s ease-in-out;
+      }
+
+      #anima-watermark {
+        transition: all 0.5s ease-in-out;
+        display: none;
+      }
+      #anima-watermark-link {
+        position: fixed;
+        bottom: 20px;
+        height: 30px;
+        border-radius: 1000px;
+        background: #3b3b3b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+        transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 16px 8px 11px;
+        font-family: Mulish, sans-serif;
+        font-size: 12px;
+      }
+      #anima-watermark-link .text {
+        margin-left: 6px;
+      }
+
+      .omniview-anima-action-links .link {
+        height: 30px;
+        width: 30px;
+        border-radius: 1000px;
+        background: #3b3b3b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+        transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-decoration: none;
+        color: #fff;
+      }
+      .omniview-anima-action-links #comment-link .text,
+      .omniview-anima-action-links #code-link .text {
+        display: none;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+      .omniview-anima-action-links #comment-link:hover,
+      .omniview-anima-action-links #code-link:hover {
+        width: 105px;
+      }
+      .omniview-anima-action-links #comment-link.pop-active,
+      .omniview-anima-action-links #code-link.pop-active {
+        width: 105px;
+        background: #ff6250;
+      }
+      .omniview-anima-action-links #comment-link.pop-active .text,
+      .omniview-anima-action-links #code-link.pop-active .text {
+        display: block;
+      }
+      .omniview-anima-action-links #comment-link:hover .text,
+      .omniview-anima-action-links #code-link:hover .text {
+        display: block;
+      }
+
+      .link.navigation {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 32px;
+        color: #fff;
+        font-size: 12px;
+        cursor: default;
+        padding: 0 5px;
+      }
+      .link.navigation .icon {
+        margin: 0 6px;
+        fill: none;
+        stroke: currentColor;
+        cursor: pointer;
+      }
+      .link.navigation .icon.disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      .link.navigation .home-icon {
+        margin-left: 6px;
+        fill: currentColor;
+        stroke: currentColor;
+        cursor: pointer;
+      }
+
+      .omniview-anima-action-links .restart {
+        height: 30px;
+        padding: 0 12px;
+        background: #3b3b3b;
+        border-radius: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #f1f1f1;
+        font-size: 12px;
+      }
+
+      .omniview-anima-action-links {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-family: Mulish, sans-serif;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+      }
+
+      .omniview-anima-action-links > * + * {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+
+      .idle {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #popoverOpener {
+        position: absolute;
+        left: 50%;
+        margin-left: -10vw;
+        text-align: center;
+        top: 45vh;
+        width: 20vw;
+      }
+
+      .popover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1060;
+        display: none;
+        font-family: "sans-serif";
+        font-size: 14px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .popover.top {
+        margin-top: -12px;
+      }
+
+      .popover.right {
+        margin-left: 10px;
+      }
+
+      .popover.bottom {
+        margin-top: 10px;
+      }
+
+      .popover.left {
+        margin-left: -10px;
+      }
+
+      .popover-title {
+        padding: 8px 14px;
+        margin: 0;
+        font-size: 14px;
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #ebebeb;
+        border-radius: 5px 5px 0 0;
+      }
+
+      .popover-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        font-family: Mulish, sans-serif;
+      }
+
+      .popover > .arrow,
+      .popover > .arrow:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+      }
+
+      .popover > .arrow {
+        border-width: 11px;
+      }
+
+      .popover > .arrow:after {
+        content: "";
+        border-width: 10px;
+      }
+
+      .popover.top > .arrow {
+        bottom: -11px;
+        left: 50%;
+        margin-left: -11px;
+        border-top-color: #999;
+        border-top-color: rgba(0, 0, 0, 0.25);
+        border-bottom-width: 0;
+      }
+
+      .popover.top > .arrow:after {
+        bottom: 1px;
+        margin-left: -10px;
+        content: " ";
+        border-top-color: #fff;
+        border-bottom-width: 0;
+      }
+
+      .popover.right > .arrow {
+        top: 50%;
+        left: -11px;
+        margin-top: -11px;
+        border-right-color: #999;
+        border-right-color: rgba(0, 0, 0, 0.25);
+        border-left-width: 0;
+      }
+
+      .popover.right > .arrow:after {
+        bottom: -10px;
+        left: 1px;
+        content: " ";
+        border-right-color: #fff;
+        border-left-width: 0;
+      }
+
+      .popover.bottom > .arrow {
+        top: -11px;
+        left: 50%;
+        margin-left: -11px;
+        border-top-width: 0;
+        border-bottom-color: #999;
+        border-bottom-color: rgba(0, 0, 0, 0.25);
+      }
+
+      .popover.bottom > .arrow:after {
+        top: 1px;
+        margin-left: -10px;
+        content: " ";
+        border-top-width: 0;
+        border-bottom-color: #fff;
+      }
+
+      .popover.left > .arrow {
+        top: 50%;
+        right: -11px;
+        margin-top: -11px;
+        border-right-width: 0;
+        border-left-color: #999;
+        border-left-color: rgba(0, 0, 0, 0.25);
+      }
+
+      .popover.left > .arrow:after {
+        right: 1px;
+        bottom: -10px;
+        content: " ";
+        border-right-width: 0;
+        border-left-color: #fff;
+      }
+
+      #anima-comment-popover,
+      #anima-code-popover {
+        background: #333333;
+        color: #fff;
+      }
+
+      #anima-comment-popover.top > .arrow,
+      #anima-comment-popover.top > .arrow:after,
+      #anima-code-popover.top > .arrow:after,
+      #anima-code-popover.top > .arrow {
+        border-top-color: #333;
+      }
+
+      #anima-comment-popover .btn,
+      #anima-code-popover .btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 6px 20px;
+        background: #ff6250;
+        color: #fff;
+        border-radius: 100px;
+        width: max-content;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width: 550px) {
+        #anima-watermark-link {
+          padding: 6px !important;
+        }
+        #anima-watermark-link .text {
+          display: none !important;
+        }
+      }
+    </style>
+    <script src="chrome-extension://pgojnojmmhpofjgdmaebadhbocahppod/assets/inject/inject-aws.js"></script>
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="offer-pc" />
+    <div class="container-center-horizontal">
+      <div class="offer-pc screen" data-id="104:2" style="margin-top: 70px">
+        <img
+          class="vector-G01i6o vector"
+          data-id="104:19"
+          src="./purple-rice-8588.animaapp.io_files/vector.svg"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/vector.svg"
+          alt="Vector"
+        />
+        <div class="content-footer-G01i6o" data-id="104:25">
+          <div class="rectangle-75-zuRgNC" data-id="104:26"></div>
+          <p
+            class="car-breezy-2024-all-rights-reserved-zuRgNC"
+            data-id="104:28"
+          >
+            <span class="span0-xq4Dn7">©CarBreezy </span
+            ><span class="span1-xq4Dn7">2024. All rights reserved.</span>
+          </p>
+          <img
+            class="line-5-zuRgNC"
+            data-id="104:29"
+            src="./purple-rice-8588.animaapp.io_files/line-5.svg"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/line-5.svg"
+            alt="Line 5"
+          />
+          <div class="group-31-zuRgNC" data-id="104:30">
+            <div class="group-17-5PgCYx" data-id="104:31">
+              <img
+                class="x0e9e966f2868e68cf5fa-v9NcuV"
+                data-id="104:32"
+                src="./purple-rice-8588.animaapp.io_files/0e9e966f2868e68cf5fa52d2ff45c27b-removebg-preview-1.png"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/0e9e966f2868e68cf5fa52d2ff45c27b-removebg-preview-1.png"
+                alt="0e9e966f2868e68cf5fa52d2ff45c27b-removebg-preview 1"
+              />
+              <div class="car-breezy-v9NcuV car-breezy" data-id="104:33">
+                CarBreezy
+              </div>
+            </div>
+            <p class="with-the-motto-of-br-5PgCYx" data-id="104:34">
+              With the motto of bringing customers more value and simplifying
+              the car buying process.
+            </p>
+            <img
+              class="bxl-facebook-circle-1-5PgCYx"
+              data-id="104:35"
+              src="./purple-rice-8588.animaapp.io_files/bxl-facebook-circle-1.svg"
+              anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bxl-facebook-circle-1.svg"
+              alt="bxl-facebook-circle 1"
+            /><img
+              class="bxl-instagram-alt-1-5PgCYx"
+              data-id="104:37"
+              src="./purple-rice-8588.animaapp.io_files/bxl-instagram-alt-1.svg"
+              anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bxl-instagram-alt-1.svg"
+              alt="bxl-instagram-alt 1"
+            /><img
+              class="bxl-twitter-1-5PgCYx"
+              data-id="104:40"
+              src="./purple-rice-8588.animaapp.io_files/bxl-twitter-1.svg"
+              anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bxl-twitter-1.svg"
+              alt="bxl-twitter 1"
+            /><img
+              class="bxl-youtube-1-5PgCYx"
+              data-id="104:42"
+              src="./purple-rice-8588.animaapp.io_files/bxl-youtube-1.svg"
+              anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bxl-youtube-1.svg"
+              alt="bxl-youtube 1"
+            />
+          </div>
+          <div class="group-32-zuRgNC" data-id="104:44">
+            <div class="page-ixNIcN" data-id="104:45">Page</div>
+            <div class="contact-us-ixNIcN" data-id="104:46">Contact Us</div>
+            <div class="group-26-ixNIcN" data-id="104:47">
+              <img
+                class="bx-search-1-yqzlhF bx-search-1"
+                data-id="104:48"
+                src="./purple-rice-8588.animaapp.io_files/bx-search-1.svg"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bx-search-1.svg"
+                alt="bx-search 1"
+              />
+              <div class="group-22-yqzlhF" data-id="104:52">
+                <div
+                  class="carbreezy-cargmailcom-41lGTK valign-text-middle poppins-normal-mine-shaft-32px"
+                  data-id="104:53"
+                >
+                  carbreezyCar@gmail.com
+                </div>
+              </div>
+            </div>
+            <div class="group-27-ixNIcN" data-id="104:54">
+              <img
+                class="bx-search-1-aaRnyZ bx-search-1"
+                data-id="104:55"
+                src="./purple-rice-8588.animaapp.io_files/bx-search-1-1.svg"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bx-search-1-1.svg"
+                alt="bx-search 1"
+              />
+              <div class="group-22-aaRnyZ" data-id="104:58">
+                <div
+                  class="hotline0825-355-355-xIDvBJ valign-text-middle"
+                  data-id="104:59"
+                >
+                  <span
+                    ><span class="span0-xE1UqZ poppins-normal-mine-shaft-32px"
+                      >Hotline:&nbsp;</span
+                    ><a href="tel:0825355355" target="_blank"
+                      ><span class="span1-xE1UqZ poppins-normal-mine-shaft-32px"
+                        >0825 355 355</span
+                      ></a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="group-25-ixNIcN" data-id="104:60">
+              <img
+                class="bx-search-1-kFrx4E bx-search-1"
+                data-id="104:61"
+                src="./purple-rice-8588.animaapp.io_files/bx-search-1-2.svg"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/bx-search-1-2.svg"
+                alt="bx-search 1"
+              />
+              <div class="group-22-kFrx4E" data-id="104:64">
+                <div
+                  class="about-ihxbFD valign-text-middle poppins-normal-mine-shaft-32px"
+                  data-id="104:65"
+                >
+                  About
+                </div>
+              </div>
+            </div>
+            <div class="group-30-ixNIcN" data-id="104:66">
+              <div
+                class="faq-hbfjDT valign-text-middle faq poppins-normal-mine-shaft-32px"
+                data-id="104:69"
+              >
+                FAQ
+              </div>
+              <img
+                class="vector-hbfjDT vector"
+                data-id="116:140"
+                src="./purple-rice-8588.animaapp.io_files/vector-1.svg"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/vector-1.svg"
+                alt="Vector"
+              />
+            </div>
+            <div class="group-29-ixNIcN" data-id="104:70">
+              <div class="group-23-BqxlEE" data-id="104:71">
+                <div class="group-22-Tbzdxx" data-id="104:72">
+                  <div
+                    class="search-H6hJMH valign-text-middle poppins-normal-mine-shaft-32px"
+                    data-id="104:73"
+                  >
+                    Search
+                  </div>
+                </div>
+              </div>
+              <img
+                class="frame-BqxlEE frame"
+                data-id="104:74"
+                src="./purple-rice-8588.animaapp.io_files/frame-2.svg"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/frame-2.svg"
+                alt="Frame"
+              />
+            </div>
+          </div>
+        </div>
+        <img
+          class="frame-G01i6o frame"
+          data-id="104:88"
+          src="./purple-rice-8588.animaapp.io_files/frame.svg"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/frame.svg"
+          alt="Frame"
+        /><img
+          class="water-1-G01i6o"
+          data-id="104:92"
+          src="./purple-rice-8588.animaapp.io_files/water-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/water-1.png"
+          alt="water 1"
+        />
+        <div class="rectangle-178-G01i6o" data-id="111:27"></div>
+        <div class="rectangle-180-G01i6o" data-id="111:54"></div>
+        <img
+          class="x4d9297ee3421d30b02b93b2f4f1a722a-1-G01i6o"
+          data-id="109:12"
+          src="./purple-rice-8588.animaapp.io_files/4d9297ee3421d30b02b93b2f4f1a722a-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/4d9297ee3421d30b02b93b2f4f1a722a-1.png"
+          alt="4d9297ee3421d30b02b93b2f4f1a722a 1"
+        />
+        <div class="frame-12-G01i6o" data-id="109:13">
+          <p
+            class="discover-unbeatable-ggDxWb poppins-normal-white-40px"
+            data-id="109:17"
+          >
+            Discover unbeatable car deals tailored to your needs and budget.
+          </p>
+          <p class="welcome-to-offers-of-car-ggDxWb" data-id="109:18">
+            Welcome to Offers of Car
+          </p>
+          <div class="group-92-ggDxWb" data-id="109:22">
+            <img
+              class="rectangle-177-DbaEEZ rectangle-177"
+              data-id="109:19"
+              src="./purple-rice-8588.animaapp.io_files/rectangle-177.png"
+              anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177.png"
+              alt="Rectangle 177"
+            />
+            <div class="see-now-DbaEEZ see-now" data-id="109:21">See now</div>
+          </div>
+        </div>
+        <div class="group-95-G01i6o" data-id="111:34">
+          <img
+            class="rectangle-177-p5Fr11 rectangle-177"
+            data-id="111:32"
+            src="./purple-rice-8588.animaapp.io_files/rectangle-177-1.png"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-1.png"
+            alt="Rectangle 177"
+          />
+        </div>
+        <div
+          class="view-details-G01i6o view-details poppins-bold-white-36px"
+          data-id="111:33"
+        >
+          View Details
+        </div>
+        <div class="group-94-G01i6o" data-id="111:26">
+          <div class="group-93-dxXPtp group-93" data-id="111:25">
+            <h1
+              class="title-JQOqVJ valign-text-middle poppins-bold-black-90px"
+              data-id="111:23"
+            >
+              Top other car models
+            </h1>
+          </div>
+          <img
+            class="line-16-dxXPtp line-16"
+            data-id="111:24"
+            src="./purple-rice-8588.animaapp.io_files/line-16.svg"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/line-16.svg"
+            alt="Line 16"
+          />
+        </div>
+        <div class="group-101-G01i6o" data-id="115:216">
+          <div class="group-93-WTp4vG group-93" data-id="115:217">
+            <p
+              class="drive-confidently-wi-Z17KqV valign-text-middle"
+              data-id="115:218"
+            >
+              <span
+                ><span class="span0-3S0b75 poppins-bold-black-90px"
+                  >Drive Confidently with </span
+                ><span class="span1-3S0b75">CarBreezy</span
+                ><span class="span2-3S0b75 poppins-bold-black-90px">
+                  Insurance</span
+                ></span
+              >
+            </p>
+          </div>
+          <img
+            class="line-16-WTp4vG line-16"
+            data-id="115:219"
+            src="./purple-rice-8588.animaapp.io_files/line-16.svg"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/line-16.svg"
+            alt="Line 16"
+          />
+        </div>
+        <img
+          class="x6b21242ad07904e60d29d22fdbbdead4-1-G01i6o"
+          data-id="111:29"
+          src="./purple-rice-8588.animaapp.io_files/6b21242ad07904e60d29d22fdbbdead4-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/6b21242ad07904e60d29d22fdbbdead4-1.png"
+          alt="6b21242ad07904e60d29d22fdbbdead4 1"
+        />
+        <div
+          class="suv-c-learance-sale-G01i6o valign-text-middle suv-c-learance-sale"
+          data-id="111:30"
+        >
+          SUV CLearance Sale
+        </div>
+        <p
+          class="explore-our-incredib-G01i6o valign-text-middle explore-our-incredib poppins-medium-black-33px"
+          data-id="111:31"
+        >
+          Explore our incredible discounts on a wide range of SUVs. Perfect for
+          families and adventurers alike, these deals won't last long!
+        </p>
+        <img
+          class="x32388f5c1cce1b088e6a4f789f87e163-1-G01i6o"
+          data-id="111:69"
+          src="./purple-rice-8588.animaapp.io_files/32388f5c1cce1b088e6a4f789f87e163-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/32388f5c1cce1b088e6a4f789f87e163-1.png"
+          alt="32388f5c1cce1b088e6a4f789f87e163 1"
+        /><img
+          class="x57c4ef37e693842453ff19129ff9a07a-1-G01i6o"
+          data-id="111:71"
+          src="./purple-rice-8588.animaapp.io_files/57c4ef37e693842453ff19129ff9a07a-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/57c4ef37e693842453ff19129ff9a07a-1.png"
+          alt="57c4ef37e693842453ff19129ff9a07a 1"
+        />
+        <div class="group-100-G01i6o" data-id="111:68">
+          <img
+            class="rectangle-177-lfAMLD rectangle-177"
+            data-id="111:45"
+            src="./purple-rice-8588.animaapp.io_files/rectangle-177-2.png"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-2.png"
+            alt="Rectangle 177"
+          />
+          <div class="buy-now-lfAMLD poppins-bold-white-36px" data-id="111:46">
+            Buy Now
+          </div>
+          <div
+            class="suv-c-learance-sale-lfAMLD valign-text-middle suv-c-learance-sale"
+            data-id="111:48"
+          >
+            SUV CLearance Sale
+          </div>
+          <p
+            class="explore-our-incredib-lfAMLD valign-text-middle explore-our-incredib poppins-medium-black-33px"
+            data-id="111:49"
+          >
+            Explore our incredible discounts on a wide range of SUVs.
+          </p>
+        </div>
+        <div class="group-98-G01i6o group-98" data-id="111:55">
+          <img
+            class="rectangle-177-ih5ljn rectangle-177"
+            data-id="111:56"
+            src="./purple-rice-8588.animaapp.io_files/rectangle-177-3.png"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-3.png"
+            alt="Rectangle 177"
+          />
+        </div>
+        <div
+          class="view-details-oC6npz view-details poppins-bold-white-36px"
+          data-id="111:57"
+        >
+          View Details
+        </div>
+        <div
+          class="suv-c-learance-sale-oC6npz valign-text-middle suv-c-learance-sale"
+          data-id="111:59"
+        >
+          SUV CLearance Sale
+        </div>
+        <p
+          class="explore-our-incredib-oC6npz valign-text-middle explore-our-incredib poppins-medium-black-33px"
+          data-id="111:60"
+        >
+          Explore our incredible discounts on a wide range of SUVs. Perfect for
+          families and adventurers alike, these deals won't last long!
+        </p>
+        <div class="rectangle-188-G01i6o" data-id="111:161"></div>
+        <img
+          class="x8da90627be8ea76e52d0367bc21018f4-2-G01i6o"
+          data-id="111:165"
+          src="./purple-rice-8588.animaapp.io_files/8da90627be8ea76e52d0367bc21018f4-2.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/8da90627be8ea76e52d0367bc21018f4-2.png"
+          alt="8da90627be8ea76e52d0367bc21018f4 2"
+        /><img
+          class="x93d9132a0460c0498fb006c6a24dfdfa-1-G01i6o"
+          data-id="111:167"
+          src="./purple-rice-8588.animaapp.io_files/93d9132a0460c0498fb006c6a24dfdfa-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/93d9132a0460c0498fb006c6a24dfdfa-1.png"
+          alt="93d9132a0460c0498fb006c6a24dfdfa 1"
+        />
+        <p
+          class="mbi-insured-customer-G01i6o valign-text-middle"
+          data-id="116:2"
+        >
+          MBI insured customers: $560<br /><br /><br /><br />MBI uninsured
+          customers: $1050<br /><br /><br /><br />Uninsured: $1500
+        </p>
+        <div
+          class="engine-hydrolock-G01i6o poppins-bold-thunderbird-60px"
+          data-id="116:3"
+        >
+          Engine Hydrolock
+        </div>
+        <div
+          class="extended-warranty-G01i6o poppins-bold-thunderbird-60px"
+          data-id="116:4"
+        >
+          Extended Warranty
+        </div>
+        <div
+          class="special-tires-G01i6o special-tires poppins-bold-thunderbird-60px"
+          data-id="116:5"
+        >
+          Special Tires
+        </div>
+        <div
+          class="special-tires-oC6npz special-tires poppins-bold-thunderbird-60px"
+          data-id="116:6"
+        >
+          Special Tires
+        </div>
+        <img
+          class="wheel-1-G01i6o"
+          data-id="116:7"
+          src="./purple-rice-8588.animaapp.io_files/wheel-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/wheel-1.png"
+          alt="wheel 1"
+        />
+        <p
+          class="x2-tires-free-tire-re-G01i6o poppins-bold-sonic-silver-30px"
+          data-id="116:8"
+        >
+          2 tires: Free tire replacement labor cost<br />4 tires: Free tire
+          replacement labor cost + 1 free tire with the same specifications when
+          the tire replaced during the program to the customer (*)
+        </p>
+        <p
+          class="x1-year-renewal-packa-G01i6o poppins-bold-sonic-silver-30px"
+          data-id="116:9"
+        >
+          ✔️ 1-year renewal package: <br />receive a $100 gas voucher
+          immediately<br />✔️ 2-year renewal package:<br />
+          receive a $250 gas voucher immediately
+        </p>
+        <img
+          class="baohiem-1-G01i6o"
+          data-id="116:10"
+          src="./purple-rice-8588.animaapp.io_files/baohiem-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/baohiem-1.png"
+          alt="baohiem 1"
+        />
+        <p
+          class="auto-insurance-progr-G01i6o poppins-bold-sonic-silver-30px"
+          data-id="116:11"
+        >
+          Auto insurance program for comprehensive protection with affordable
+          insurance packages and fast, professional claims settlement services
+          supported by leading insurance partners.
+        </p>
+        <img
+          class="frame-oC6npz frame"
+          data-id="116:12"
+          src="./purple-rice-8588.animaapp.io_files/frame-1.svg"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/frame-1.svg"
+          alt="Frame"
+        /><img
+          class="water-2-G01i6o"
+          data-id="116:16"
+          src="./purple-rice-8588.animaapp.io_files/water-1.png"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/water-1.png"
+          alt="water 2"
+        />
+        <div class="group-107-G01i6o group-107" data-id="115:220">
+          <img
+            class="x2fd41bf464157e85ff7d9c2628e66bee-1-kjHfSh"
+            data-id="111:168"
+            src="./purple-rice-8588.animaapp.io_files/2fd41bf464157e85ff7d9c2628e66bee-1.png"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/2fd41bf464157e85ff7d9c2628e66bee-1.png"
+            alt="2fd41bf464157e85ff7d9c2628e66bee 1"
+          />
+          <div class="frame-15-kjHfSh frame-15" data-id="113:173">
+            <div class="group-106-TP6ijm group-106" data-id="113:209">
+              <div
+                class="trucks-rSFxLi valign-text-middle poppins-medium-white-40px"
+                data-id="113:210"
+              >
+                Trucks
+              </div>
+              <p
+                class="discover-the-versati valign-text-middle poppins-medium-white-28px"
+                data-id="113:211"
+              >
+                Discover the versatility of our SUVs, perfect for families and
+                adventurous spirits alike.
+              </p>
+              <div class="group-105-rSFxLi group-105" data-id="113:212">
+                <div class="group-110-xwBOvQ" data-id="116:139">
+                  <div class="group-63-s3WDtL group-63" data-id="116:119">
+                    <div class="nb-car-fPD7kI nb-car" data-id="116:120">
+                      <div class="nb-item1-xcb4s9 nb-item1" data-id="116:121">
+                        <img
+                          class="hnh-xe-nb-SF3L9Z hnh-xe-nb"
+                          data-id="116:122"
+                          src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb@2x.png"
+                          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb@2x.png"
+                          alt="hnh-xe-NB"
+                        />
+                        <div
+                          class="rectangle-43-SF3L9Z rectangle-43"
+                          data-id="116:123"
+                        ></div>
+                      </div>
+                      <div class="nb-item1-pXEJ3e nb-item1" data-id="116:124">
+                        <img
+                          class="hnh-xe-nb-rnpjAZ hnh-xe-nb"
+                          data-id="116:125"
+                          src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb@2x.png"
+                          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb@2x.png"
+                          alt="hnh-xe-NB"
+                        />
+                        <div
+                          class="rectangle-43-rnpjAZ rectangle-43"
+                          data-id="116:126"
+                        ></div>
+                      </div>
+                      <div class="nb-item1-xBCGSA nb-item1" data-id="116:127">
+                        <img
+                          class="hnh-xe-nb-7vJWlT hnh-xe-nb"
+                          data-id="116:128"
+                          src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb@2x.png"
+                          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb@2x.png"
+                          alt="hnh-xe-NB"
+                        />
+                        <div
+                          class="rectangle-43-7vJWlT rectangle-43"
+                          data-id="116:129"
+                        ></div>
+                      </div>
+                      <div class="nb-item1-R5NzQf nb-item1" data-id="116:130">
+                        <img
+                          class="hnh-xe-nb-xxiizU hnh-xe-nb"
+                          data-id="116:131"
+                          src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb@2x.png"
+                          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb@2x.png"
+                          alt="hnh-xe-NB"
+                        />
+                        <div
+                          class="rectangle-43-xxiizU rectangle-43"
+                          data-id="116:132"
+                        ></div>
+                      </div>
+                      <div class="nb-item1-Yy4gGC nb-item1" data-id="116:133">
+                        <img
+                          class="hnh-xe-nb-keNYMG hnh-xe-nb"
+                          data-id="116:134"
+                          src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb@2x.png"
+                          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb@2x.png"
+                          alt="hnh-xe-NB"
+                        />
+                        <div
+                          class="rectangle-43-keNYMG rectangle-43"
+                          data-id="116:135"
+                        ></div>
+                      </div>
+                      <div class="nb-item1-PAVxZx nb-item1" data-id="116:136">
+                        <img
+                          class="hnh-xe-nb-KiSYbr hnh-xe-nb"
+                          data-id="116:137"
+                          src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb@2x.png"
+                          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb@2x.png"
+                          alt="hnh-xe-NB"
+                        />
+                        <div
+                          class="rectangle-43-KiSYbr rectangle-43"
+                          data-id="116:138"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-14-s3WDtL" data-id="113:172"></div>
+                </div>
+                <div class="group-98-xwBOvQ group-98" data-id="113:213">
+                  <img
+                    class="rectangle-177-QCbZnk rectangle-177"
+                    data-id="113:214"
+                    src="./purple-rice-8588.animaapp.io_files/rectangle-177-3.png"
+                    anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-3.png"
+                    alt="Rectangle 177"
+                  />
+                </div>
+                <div
+                  class="check-trucks-xwBOvQ poppins-bold-white-36px"
+                  data-id="113:215"
+                >
+                  Check Trucks
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-108-G01i6o" data-id="115:224">
+          <div class="frame-15-8wcJss frame-15" data-id="115:226">
+            <div class="group-109-SNyYSX" data-id="115:233">
+              <div
+                class="electric-vehicles-6pMeCB valign-text-middle poppins-medium-white-40px"
+                data-id="115:227"
+              >
+                Electric Vehicles
+              </div>
+              <p
+                class="join-the-green-revol-6pMeCB valign-text-middle poppins-medium-white-28px"
+                data-id="115:228"
+              >
+                Join the green revolution with our collection of electric
+                vehicles that offer sustainability and performance.
+              </p>
+              <div class="group-105-6pMeCB group-105" data-id="115:229">
+                <div class="group-98-xz5LuJ group-98" data-id="115:230">
+                  <img
+                    class="rectangle-177-NFxMpx rectangle-177"
+                    data-id="115:231"
+                    src="./purple-rice-8588.animaapp.io_files/rectangle-177-5.png"
+                    anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-5.png"
+                    alt="Rectangle 177"
+                  />
+                </div>
+                <div
+                  class="see-electric-vehicles-xz5LuJ poppins-bold-white-36px"
+                  data-id="115:232"
+                >
+                  See Electric Vehicles
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-176-G01i6o" data-id="115:238"></div>
+        <div class="rectangle-191-G01i6o" data-id="115:237"></div>
+        <p
+          class="sign-up-to-buy-insurance-at-car-breezy-G01i6o"
+          data-id="115:234"
+        >
+          Sign up to buy insurance at CarBreezy
+        </p>
+        <p class="get-the-latest-deals-G01i6o" data-id="115:235">
+          Get the latest deals, promotions &amp; exclusive benefits straight to
+          your inbox
+        </p>
+        <div class="rectangle-192-G01i6o" data-id="115:240"></div>
+        <div class="register-G01i6o" data-id="115:241">Register</div>
+        <div class="enter-your-phone-number-G01i6o" data-id="115:239">
+          Enter your phone number
+        </div>
+        <div class="frame-17-G01i6o" data-id="113:175">
+          <img
+            class="x3a230964631184047eaf9651b68af42a-1-Df2BB5"
+            data-id="111:166"
+            src="./purple-rice-8588.animaapp.io_files/3a230964631184047eaf9651b68af42a-1.png"
+            anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/3a230964631184047eaf9651b68af42a-1.png"
+            alt="3a230964631184047eaf9651b68af42a 1"
+          />
+          <div class="group-107-Df2BB5 group-107" data-id="115:221">
+            <div class="frame-15-ejjLHT frame-15" data-id="115:223">
+              <div class="group-106-OVERuM group-106" data-id="113:202">
+                <div
+                  class="su-vs-OT2x35 valign-text-middle poppins-medium-white-40px"
+                  data-id="113:196"
+                >
+                  SUVs
+                </div>
+                <p
+                  class="discover-the-versati valign-text-middle poppins-medium-white-28px"
+                  data-id="113:197"
+                >
+                  Discover the versatility of our SUVs, perfect for families and
+                  adventurous spirits alike.
+                </p>
+                <div class="group-105-OT2x35 group-105" data-id="113:198">
+                  <div class="group-98-ScbFdA group-98" data-id="113:199">
+                    <img
+                      class="rectangle-177-JxEdCc rectangle-177"
+                      data-id="113:200"
+                      src="./purple-rice-8588.animaapp.io_files/rectangle-177-3.png"
+                      anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-3.png"
+                      alt="Rectangle 177"
+                    />
+                  </div>
+                  <div
+                    class="explore-su-vs-ScbFdA poppins-bold-white-36px"
+                    data-id="113:201"
+                  >
+                    Explore SUVs
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-16-G01i6o" data-id="113:174">
+          <div
+            class="sedans-jV0ool valign-text-middle poppins-medium-white-40px"
+            data-id="113:176"
+          >
+            Sedans
+          </div>
+          <p
+            class="explore-our-wide-sel-jV0ool valign-text-middle poppins-medium-white-28px"
+            data-id="113:177"
+          >
+            Explore our wide selection of sedans that combine style, comfort,
+            and efficiency for everyday driving.
+          </p>
+          <div class="group-105-jV0ool group-105" data-id="113:188">
+            <div class="group-98-SS53zz group-98" data-id="113:180">
+              <img
+                class="rectangle-177-rTu4OZ rectangle-177"
+                data-id="113:181"
+                src="./purple-rice-8588.animaapp.io_files/rectangle-177-3.png"
+                anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/rectangle-177-3.png"
+                alt="Rectangle 177"
+              />
+            </div>
+            <div
+              class="view-sedans-SS53zz poppins-bold-white-36px"
+              data-id="113:182"
+            >
+              View Sedans
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-202-G01i6o" data-id="115:395"></div>
+        <img
+          class="line-17-G01i6o"
+          data-id="115:403"
+          src="./purple-rice-8588.animaapp.io_files/line-17.svg"
+          anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/line-17.svg"
+          alt="Line 17"
+        />
+        <p
+          class="special-price-on-used-cars-G01i6o valign-text-middle"
+          data-id="115:404"
+        >
+          Special price on used cars
+        </p>
+        <div class="group-56-G01i6o" data-id="115:405">
+          <div class="rectangle-123-IspMS1" data-id="115:406"></div>
+          <div
+            class="see-now-IspMS1 valign-text-middle see-now"
+            data-id="115:407"
+          >
+            See now
+          </div>
+        </div>
+        <div class="frame-18-G01i6o" data-id="115:409">
+          <div class="group-63-KYHrCD group-63" data-id="117:26">
+            <div class="nb-car-cc1iNa nb-car" data-id="117:27">
+              <div class="nb-item1-EdAFSx nb-item1" data-id="117:28">
+                <img
+                  class="hnh-xe-nb-IReSR9 hnh-xe-nb"
+                  data-id="117:29"
+                  src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb-1@2x.png"
+                  anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb-1@2x.png"
+                  alt="hnh-xe-NB"
+                />
+                <div
+                  class="rectangle-43-IReSR9 rectangle-43"
+                  data-id="117:30"
+                ></div>
+              </div>
+              <div class="nb-item1-kkeSJE nb-item1" data-id="117:31">
+                <img
+                  class="hnh-xe-nb-8tjxL5 hnh-xe-nb"
+                  data-id="117:32"
+                  src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb-1@2x.png"
+                  anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb-1@2x.png"
+                  alt="hnh-xe-NB"
+                />
+                <div
+                  class="rectangle-43-8tjxL5 rectangle-43"
+                  data-id="117:33"
+                ></div>
+              </div>
+              <div class="nb-item1-GIvEkc nb-item1" data-id="117:34">
+                <img
+                  class="hnh-xe-nb-thX9vl hnh-xe-nb"
+                  data-id="117:35"
+                  src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb-1@2x.png"
+                  anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb-1@2x.png"
+                  alt="hnh-xe-NB"
+                />
+                <div
+                  class="rectangle-43-thX9vl rectangle-43"
+                  data-id="117:36"
+                ></div>
+              </div>
+              <div class="nb-item1-1dc8QE nb-item1" data-id="117:37">
+                <img
+                  class="hnh-xe-nb-vYV09x hnh-xe-nb"
+                  data-id="117:38"
+                  src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb-1@2x.png"
+                  anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb-1@2x.png"
+                  alt="hnh-xe-NB"
+                />
+                <div
+                  class="rectangle-43-vYV09x rectangle-43"
+                  data-id="117:39"
+                ></div>
+              </div>
+              <div class="nb-item1-BeLBOB nb-item1" data-id="117:40">
+                <img
+                  class="hnh-xe-nb-Ysn4xa hnh-xe-nb"
+                  data-id="117:41"
+                  src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb-1@2x.png"
+                  anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb-1@2x.png"
+                  alt="hnh-xe-NB"
+                />
+                <div
+                  class="rectangle-43-Ysn4xa rectangle-43"
+                  data-id="117:42"
+                ></div>
+              </div>
+              <div class="nb-item1-4Chwt8 nb-item1" data-id="117:43">
+                <img
+                  class="hnh-xe-nb-Lpe73G hnh-xe-nb"
+                  data-id="117:44"
+                  src="./purple-rice-8588.animaapp.io_files/h-nh-xe-nb-1@2x.png"
+                  anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/h-nh-xe-nb-1@2x.png"
+                  alt="hnh-xe-NB"
+                />
+                <div
+                  class="rectangle-43-Lpe73G rectangle-43"
+                  data-id="117:45"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-203-G01i6o" data-id="115:410"></div>
+        <div class="navbar-G01i6o" data-id="130:617">
+          <div class="group-55-Y6HI9y" data-id="130:618">
+            <div class="background-nav-j4hqvD" data-id="130:619"></div>
+            <header class="header-j4hqvD" data-id="130:620">
+              <div class="menu-vixWIX" data-id="130:621">
+                <div
+                  class="newcar-66dTYL poppins-normal-white-40px"
+                  data-id="130:622"
+                >
+                  Newcar
+                </div>
+                <div
+                  class="home-66dTYL poppins-normal-white-40px"
+                  data-id="130:623"
+                >
+                  Home
+                </div>
+                <div
+                  class="brands-66dTYL poppins-normal-white-40px"
+                  data-id="130:624"
+                >
+                  Brands
+                </div>
+                <div
+                  class="used-66dTYL poppins-normal-white-40px"
+                  data-id="130:625"
+                >
+                  Used
+                </div>
+                <div
+                  class="offer-66dTYL poppins-normal-white-40px"
+                  data-id="130:626"
+                >
+                  Offer
+                </div>
+                <div
+                  class="faq-66dTYL faq poppins-normal-white-40px"
+                  data-id="130:627"
+                >
+                  FAQ
+                </div>
+                <div
+                  class="contact-66dTYL poppins-normal-white-40px"
+                  data-id="130:628"
+                >
+                  Contact
+                </div>
+              </div>
+            </header>
+          </div>
+          <div class="group-171-Y6HI9y" data-id="130:630">
+            <div class="car-breezy-fooogQ car-breezy" data-id="130:631">
+              CarBreezy
+            </div>
+            <img
+              class="x4452a43b90e909194eb8-fooogQ"
+              data-id="130:632"
+              src="./purple-rice-8588.animaapp.io_files/4452a43b90e909194eb89bf733775c7d-removebg-preview.png"
+              anima-src="https://cdn.animaapp.com/projects/672ae6a0d15fa5a48aa0a5f8/releases/67569e6ba6a6e509bc9b4db6/img/4452a43b90e909194eb89bf733775c7d-removebg-preview.png"
+              alt="4452a43b90e909194eb89bf733775c7d-removebg-preview"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
