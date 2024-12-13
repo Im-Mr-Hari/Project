@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faShareFromSquare, faTachometerAlt, faGasPump, faCar, faSquare, faCogs, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-
-
 function CarDetails() {
     const [mainImage, setMainImage] = useState("./img/porsche6.jpg");
     const [thumbnailImage, setThumbnailImage] = useState([
@@ -16,12 +14,12 @@ function CarDetails() {
 
     const handleThumbnailClick = (image) => {
         const updatedThumbnails = [...thumbnailImage, mainImage];
-        const filteredThumbnails = updatedThumbnails.filter((img)=> img !== image);
+        const filteredThumbnails = updatedThumbnails.filter((img) => img !== image);
         setMainImage(image);
         setThumbnailImage(filteredThumbnails);
     };
 
-    return ( 
+    return (
         <div>
             <div>
                 thanh dieu huong truy cap
@@ -30,9 +28,9 @@ function CarDetails() {
                 <div className='pic'>
                     <div><img src={mainImage} alt="Main Car" /></div>
                     <div className='pic-item'>
-                        {thumbnailImage.map((image, index) =>(
-                            <div key={index} onClick={()=> handleThumbnailClick(image)}>
-                                <img src={image} alt={`Thumnail ${index + 1}`} />
+                        {thumbnailImage.map((image, index) => (
+                            <div key={index} onClick={() => handleThumbnailClick(image)}>
+                                <img src={image} alt={`Thumbnail ${index + 1}`} />
                             </div>
                         ))}
                     </div>                    
@@ -40,52 +38,52 @@ function CarDetails() {
                 <div className='info'>
                     <h1>Tên Xe</h1>
                     <span>853.000$</span>
-                    <div>
-                        <button>
+                    <div className='detail-buttons'>
+                        <button className='detail-btn detail-btn-phone'>
                             <FontAwesomeIcon icon={faPhone} 
-                            style={{marginRight: "8px", color:"#FFF"}}/>
+                            className="icon" />
                             Call Us
                         </button>
-                        <button>
+                        <button className='detail-btn detail-btn-mail'>
                             <FontAwesomeIcon icon={faEnvelope} 
-                            style={{marginRight: "8px", color:"#FFF"}}/>
+                            className="icon" />
                             Email
                         </button>
-                        <button>
+                        <button className='detail-btn detail-btn-share'>
                             <FontAwesomeIcon icon={faShareFromSquare} 
-                            style={{marginRight: "8px", color:"#FFF"}}/>
+                            className="icon" />
                             Share
                         </button>
                     </div>
                     <div>
                         <div className='child-info'>
                             <div className='info-icon'>
-                                <span style={{padding: "10px"}}>
-                                    <FontAwesomeIcon icon={faTachometerAlt} style={{ marginRight: "8px" }} />
+                                <span className='info-item'>
+                                    <FontAwesomeIcon icon={faTachometerAlt} className="icon" />
                                     20.000km
                                 </span>
-                                <span style={{padding: "10px"}}>
-                                    <FontAwesomeIcon icon={faGasPump} style={{ marginRight: "8px" }} />
+                                <span className='info-item'>
+                                    <FontAwesomeIcon icon={faGasPump} className="icon" />
                                     Gas
                                 </span>
                             </div>
                             <div className='info-icon'>
-                                <span style={{padding: "10px"}}>
-                                    <FontAwesomeIcon icon={faCar} style={{ marginRight: "8px" }} />
+                                <span className='info-item'>
+                                    <FontAwesomeIcon icon={faCar} className="icon" />
                                     5 seats
                                 </span>
-                                <span style={{padding: "10px"}}>
-                                    <FontAwesomeIcon icon={faSquare} style={{ marginRight: "8px" }} />
-                                     5 seats
+                                <span className='info-item'>
+                                    <FontAwesomeIcon icon={faSquare} className="icon" />
+                                    5 seats
                                 </span>
                             </div>
                             <div className='info-icon'>
-                                <span style={{padding: "10px"}}>
-                                    <FontAwesomeIcon icon={faCogs} style={{ marginRight: "8px" }} />
+                                <span className='info-item'>
+                                    <FontAwesomeIcon icon={faCogs} className="icon" />
                                     CVT
                                 </span>
-                                <span style={{padding: "10px"}}>
-                                    <FontAwesomeIcon icon={faMapMarkerAlt} style={{ marginRight: "8px" }} />
+                                <span className='info-item'>
+                                    <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
                                     CVT
                                 </span>
                             </div>
@@ -94,8 +92,8 @@ function CarDetails() {
                             <div className='contact-us'>
                                 <div className='chil-contacts'>
                                     <FontAwesomeIcon icon={faInstagram}  
-                                    style={{marginRight: "8px"}} />
-                                    Instargram
+                                    className="icon" />
+                                    Instagram
                                 </div>
                                 <div className='chil-contacts'>
                                     Hot Line: 0825 355 355
@@ -123,13 +121,13 @@ function CarDetails() {
                         <h1>CarBreezy - Carpla - Used Car Trading Platform</h1>
                     </div>
                     <div className='buy-sale'>
-                        <span className='buy-sale2'>By Car Now</span>
+                        <span className='buy-sale2'>Buy Car Now</span>
                         <span className='buy-sale2'>Sell Car Now</span>
                     </div>     
                 </div>                
             </div>
         </div>
-     );
+    );
 }
 
 export default CarDetails;

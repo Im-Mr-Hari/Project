@@ -1,9 +1,11 @@
 import FAQComponent from './FAQ';
-import FAQ from './FAQ';
+import UsedCar from './pages/UsedCar';
 import Home from './Home';
 import Newcar from './Newcar';
 import Logo from './asets/Group_193-removebg-preview.png'
 import { Link, Routes, Route } from 'react-router-dom'
+import './App.css';
+import CarDetails from './pages/CarDetails';
 
 function App() {
   return (
@@ -42,8 +44,8 @@ function App() {
               </div>
             </div>
           </div>
-          <Link className='link' to="">Used</Link>
-          <Link className='link' to="">Offer</Link>
+          <Link className='link' to="/usedcar">Used</Link>
+          <Link className='link' to="/cardetails">Offer</Link>
         </div>
 
 
@@ -116,6 +118,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/newCar" element={<Newcar />} />
         <Route path="/FAQ" element={<FAQComponent />} />
+        <Route path="/usedcar" element={<UsedCar/>}/>
+        <Route path='/cardetails' element={<CarDetails/>}/>
       </Routes>
 
 
