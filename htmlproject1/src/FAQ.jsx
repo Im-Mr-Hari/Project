@@ -1,8 +1,4 @@
-import fb from './asets/icon-FB.svg'
-import ins from './asets/icon-INS.svg'
-import youtube from './asets/icon-yt.svg'
-import twitter from './asets/icon-twiiter.svg'
-import Logo from './asets/Group_193-removebg-preview.png'
+import { Link, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 
 const FAQComponent = () => {
@@ -108,19 +104,19 @@ const FAQComponent = () => {
             <footer>
                 <div className="container_footer">
                     <div className='col-left_footer'>
-                        <img className='logo logo-footer' src={Logo} alt="" />
+                        <img className='logo logo-footer' src="../img/Group_193-removebg-preview.png" alt="" />
                         <p className='slogan'>With the motto of bringing customers more value and simplifying the car buying process. </p>
                         <div className='social-box'>
-                            <img className='logo-social' src={fb} alt="" />
-                            <img className='logo-social' src={ins} alt="" />
-                            <img className='logo-social' src={youtube} alt="" />
-                            <img className='logo-social' src={twitter} alt="" />
+                            <img className='logo-social' src="../img/icon-FB.svg" alt="" />
+                            <img className='logo-social' src="../img/icon-INS.svg" alt="" />
+                            <img className='logo-social' src="../img/icon-yt.svg" alt="" />
+                            <img className='logo-social' src="../img/icon-twiiter.svg" alt="" />
                         </div>
                     </div>
 
                     <div className='col-page'>
                         <p className='title-footer'>Page</p>
-                        <a className='hover-footer' href="">
+                        <Link className='hover-footer' to="/newCar">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-11">
                                     <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
@@ -128,16 +124,16 @@ const FAQComponent = () => {
                                 </svg>
                                 <span>Search</span>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a className='hover-footer' href="">
+                        <Link className='hover-footer' to="/FAQ">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-11">
                                     <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
                                 </svg>
                                 <span>FAQ</span>
                             </div>
-                        </a>
+                        </Link>
 
                         <a className='hover-footer' href="">
                             <div>
@@ -170,14 +166,14 @@ const FAQComponent = () => {
                             </div>
                         </a>
                     </div>
-                </div >
+                </div>
 
                 <hr className='hr-footer' />
                 <p className='right'><span className='color'>©CarBreezy</span> 2024. All rights reserved.</p>
                 <marquee width="100%" direction="left" height="20px">
                     10/12/2024 - 08:07 - TPHCM
                 </marquee>
-            </footer >
+            </footer>
         </div >
     );
 };

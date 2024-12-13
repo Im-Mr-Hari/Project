@@ -473,7 +473,7 @@ nav .nav-right {
 /* Numbers speaking */
 .bgPicture {
   margin-top: 70px;
-  background-image: url(./asets/background-numbers.jpg);
+  background-image: url(../public/img/background-numbers.jpg);
   background-repeat: no-repeat;
   height: 70vh;
   max-width: 100%;

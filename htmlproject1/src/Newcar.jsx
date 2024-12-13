@@ -1,16 +1,3 @@
-// logo car
-import hondaLogo from './asets/icon-HONDA.jpg'
-import kiaLogo from './asets/icon-kia.jpg'
-import teslaLogo from './asets/icon-TESLA.jpg'
-import fordLogo from './asets/icon-FORD.jpg'
-import ferrariLogo from './asets/icon-ferrari.jpg'
-import mazdaLogo from './asets/logo-mazdad.jpg'
-import car from './asets/car.jpg'
-import fb from './asets/icon-FB.svg'
-import ins from './asets/icon-INS.svg'
-import youtube from './asets/icon-yt.svg'
-import twitter from './asets/icon-twiiter.svg'
-import Logo from './asets/Group_193-removebg-preview.png'
 import { Routes, Route, Link } from 'react-router-dom'
 import FAQComponent from './FAQ'
 
@@ -37,36 +24,22 @@ function Newcar() {
                 </div>
 
                 {/* carousel car logo */}
-                <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <div className="d-flex justify-content-between">
-                                <img style={{ width: "200px" }} src={hondaLogo} alt="Skoda" className="carousel-logo" />
-                                <img src={kiaLogo} alt="Seat" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={teslaLogo} alt="Audi" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={ferrariLogo} alt="Audi" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={fordLogo} alt="Audi" className="carousel-logo" />
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <div className="d-flex justify-content-between">
-                                <img src={mazdaLogo} alt="Cupra" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={hondaLogo} alt="Skoda" className="carousel-logo" />
-                                <img src={kiaLogo} alt="Seat" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={teslaLogo} alt="Audi" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={ferrariLogo} alt="Audi" className="carousel-logo" />
-                            </div>
-                        </div>
+                <div className="brands-search">
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/Hondalogo.jpg" alt="Honda" /></a>
                     </div>
-
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/KIAlogo.jpg" alt="KIA" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/Teslalogo.jpg" alt="Tesla" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/ferrarilogo.jpg" alt="Ferrari" style={{ width: "160px" }} /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/fordlogo.jpg" alt="Ford" /></a>
+                    </div>
                 </div>
 
             </header>
@@ -163,7 +136,7 @@ function Newcar() {
                     <div className='cars_container'>
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -194,7 +167,7 @@ function Newcar() {
 
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -225,7 +198,7 @@ function Newcar() {
 
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -256,7 +229,7 @@ function Newcar() {
 
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -287,7 +260,7 @@ function Newcar() {
 
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -318,7 +291,7 @@ function Newcar() {
 
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -349,7 +322,7 @@ function Newcar() {
 
                         <div className="car-item">
                             <div className='container_img-car'>
-                                <img src={car} alt="" className="img-car" />
+                                <img src="../img/car.jpg" alt="" className="img-car" />
                             </div>
                             <div className='info-car'>
                                 <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
@@ -399,19 +372,19 @@ function Newcar() {
             <footer>
                 <div className="container_footer">
                     <div className='col-left_footer'>
-                        <img className='logo logo-footer' src={Logo} alt="" />
+                        <img className='logo logo-footer' src="../img/Group_193-removebg-preview.png" alt="" />
                         <p className='slogan'>With the motto of bringing customers more value and simplifying the car buying process. </p>
                         <div className='social-box'>
-                            <img className='logo-social' src={fb} alt="" />
-                            <img className='logo-social' src={ins} alt="" />
-                            <img className='logo-social' src={youtube} alt="" />
-                            <img className='logo-social' src={twitter} alt="" />
+                            <img className='logo-social' src="../img/icon-FB.svg" alt="" />
+                            <img className='logo-social' src="../img/icon-INS.svg" alt="" />
+                            <img className='logo-social' src="../img/icon-yt.svg" alt="" />
+                            <img className='logo-social' src="../img/icon-twiiter.svg" alt="" />
                         </div>
                     </div>
 
                     <div className='col-page'>
                         <p className='title-footer'>Page</p>
-                        <a className='hover-footer' href="">
+                        <Link className='hover-footer' to="/newCar">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-11">
                                     <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
@@ -419,7 +392,7 @@ function Newcar() {
                                 </svg>
                                 <span>Search</span>
                             </div>
-                        </a>
+                        </Link>
 
                         <Link className='hover-footer' to="/FAQ">
                             <div>

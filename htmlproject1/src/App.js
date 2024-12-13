@@ -1,9 +1,9 @@
 import FAQComponent from './FAQ';
-import FAQ from './FAQ';
 import Home from './Home';
 import Newcar from './Newcar';
-import Logo from './asets/Group_193-removebg-preview.png'
+import UsedCar from './Usedcar';
 import { Link, Routes, Route } from 'react-router-dom'
+import './App.css'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <label for="check-menu" className='overlay'></label>
 
         <div className='logo_container'>
-          <Link to="/"><img className='logo' src={Logo} alt="" /></Link>
+          <Link to="/"><img className='logo' src="../img/Group_193-removebg-preview.png" alt="" /></Link>
         </div>
 
         <div className='nav-left'>
@@ -42,7 +42,7 @@ function App() {
               </div>
             </div>
           </div>
-          <Link className='link' to="">Used</Link>
+          <Link className='link' to="/usedcar">Used</Link>
           <Link className='link' to="">Offer</Link>
         </div>
 
@@ -55,7 +55,7 @@ function App() {
         {/* navbar for tablet & mobile */}
         <div className='mobile-tablet_menu'>
           <div className='res_header-menu'>
-            <img className='logo logo-menu' src={Logo} alt="" />
+            <img className='logo logo-menu' src='../img/Group_193-removebg-preview.png' alt="" />
 
             <label for="check-menu">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-7">
@@ -93,7 +93,7 @@ function App() {
                 </div>
               </li>
             </div>
-            <Link style={{ textDecoration: "none" }} to="">
+            <Link style={{ textDecoration: "none" }} to="/usedcar">
               <div className='box-li-span_menu'>
                 <li>
                   <span>Used</span>
@@ -116,6 +116,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/newCar" element={<Newcar />} />
         <Route path="/FAQ" element={<FAQComponent />} />
+        <Route path="/usedcar" element={<UsedCar />} />
       </Routes>
 
 

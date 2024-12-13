@@ -1,26 +1,5 @@
-import videoBg from './asets/video-bground.mp4'
-import searchLogo from './asets/Search-logo.png'
 import React, { useState, useEffect } from 'react';
 import { Link, Routes, Route } from 'react-router-dom'
-// logo car
-import hondaLogo from './asets/icon-HONDA-removebg-preview.png'
-import kiaLogo from './asets/icon-kia-removebg-preview.png'
-import teslaLogo from './asets/icon-TESLA-removebg-preview.png'
-import fordLogo from './asets/icon-FORD-removebg-preview.png'
-import ferrariLogo from './asets/icon-ferrari-removebg.png'
-import mazdaLogo from './asets/logo-mazdad-removebg-preview.png'
-// khac
-import Logo from './asets/Group_193-removebg-preview.png'
-import favouriteCar from './asets/pic-of-car.jpg'
-import quality from './asets/images-removebg-preview_2-removebg-preview.png'
-import service from './asets/logo-reason-2.png'
-import prices from './asets/logo-reason-3.png'
-import star from './asets/star.png'
-import fb from './asets/icon-FB.svg'
-import fbIcon from "./asets/facebook-svgrepo-com.svg"
-import ins from './asets/icon-INS.svg'
-import youtube from './asets/icon-yt.svg'
-import twitter from './asets/icon-twiiter.svg'
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -42,7 +21,7 @@ function Home() {
                         objectFit: 'cover',
                     }}
                 >
-                    <source className='videoBg' src={videoBg} type="video/mp4" />
+                    <source className='videoBg' src="../img/video-bground.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
@@ -50,7 +29,7 @@ function Home() {
                     <p className='p-1'>WELCOME TO <span className='color'>CARBREEZY</span></p>
                     <p className='p-2'><span className='color luxury-text'>Luxury</span> Experience On Every Journey</p>
                     <button className='btn-greeting'>
-                        <img className='search-logo' src={searchLogo} alt="Search Logo" />
+                        <img className='search-logo' src="../img/Search-logo.png" alt="Search Logo" />
                         <span className='content-search'>See more</span>
                     </button>
                 </div>
@@ -60,7 +39,7 @@ function Home() {
                 <p className='title-brands'>Our premium brands</p>
 
                 {/* Our premium brands */}
-                <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                {/* <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <div className="d-flex justify-content-between">
@@ -74,7 +53,7 @@ function Home() {
                         <div className="carousel-item">
                             <div className="d-flex justify-content-between">
                                 <img src={mazdaLogo} alt="Cupra" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={hondaLogo} alt="Skoda" className="carousel-logo" />
+                                <img style={{ width: "200px" }} src="../img/Hondalogo.jpg" alt="Skoda" className="carousel-logo" />
                                 <img src={kiaLogo} alt="Seat" className="carousel-logo" />
                                 <img style={{ width: "200px" }} src={teslaLogo} alt="Audi" className="carousel-logo" />
                                 <img style={{ width: "200px" }} src={ferrariLogo} alt="Audi" className="carousel-logo" />
@@ -90,6 +69,24 @@ function Home() {
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
                     </button>
+                </div> */}
+
+                <div className="brands-search">
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/Hondalogo.jpg" alt="Honda" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/KIAlogo.jpg" alt="KIA" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/Teslalogo.jpg" alt="Tesla" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/ferrarilogo.jpg" alt="Ferrari" style={{ width: "160px" }} /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/fordlogo.jpg" alt="Ford" /></a>
+                    </div>
                 </div>
 
                 {/* Top favourite car models */}
@@ -101,55 +98,55 @@ function Home() {
 
                     <div className="container_favouriteCar">
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
                         </div>
                         <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
+                            <img className='favourite-car_img' src="../img/pic-of-car.jpg" alt="" />
                             <div className='info-car_box'>
                                 <p>Information of car</p>
                             </div>
@@ -172,17 +169,17 @@ function Home() {
 
                     <div className='container_reason-content'>
                         <div className="reason-item">
-                            <img className='logo-reason' src={quality} alt="" />
+                            <img className='logo-reason' src="../img/images-removebg-preview_2-removebg-preview.png" alt="" />
                             <p className='title-reason-content'>Quality and Reliability</p>
                             <p className='reason-content'>CarBreezy's team is always ready to support you, from car selection to after-sales maintenance, ensuring a perfect experience for each customer.</p>
                         </div>
                         <div style={{ marginTop: "20px" }} className="reason-item">
-                            <img style={{ width: "60px" }} className='logo-reason' src={service} alt="" />
+                            <img style={{ width: "60px" }} className='logo-reason' src="../img/logo-reason-2.png" alt="" />
                             <p className='title-reason-content'>Competitive Prices</p>
                             <p className='reason-content'>We offer competitive prices on both new and used cars to suit your every need and budget.</p>
                         </div>
                         <div className="reason-item">
-                            <img className='logo-reason' src={prices} alt="" />
+                            <img className='logo-reason' src="../img/logo-reason-3.png" alt="" />
                             <p className='title-reason-content'>Quality and Reliability</p>
                             <p className='reason-content'>CarBreezy range of cars that combine modern technology and high reliability. Each car in our product range is designed to meet the diverse needs of our customers.</p>
                         </div>
@@ -231,7 +228,7 @@ function Home() {
                     <div className="container-feedback">
                         <div className="feedback-item">
                             <div className='header-feedback'>
-                                <img className='star' src={star} alt="" />
+                                <img className='star' src="../img/star.png" alt="" />
                                 <div style={{ width: "70px" }}></div>
                                 <p className='day'>12/05/2024</p>
                             </div>
@@ -242,7 +239,7 @@ function Home() {
                         </div>
                         <div className="feedback-item">
                             <div className='header-feedback'>
-                                <img className='star' src={star} alt="" />
+                                <img className='star' src="../img/star.png" alt="" />
                                 <div style={{ width: "70px" }}></div>
                                 <p className='day'>06/04/2023</p>
                             </div>
@@ -253,7 +250,7 @@ function Home() {
                         </div>
                         <div className="feedback-item">
                             <div className='header-feedback'>
-                                <img className='star' src={star} alt="" />
+                                <img className='star' src="../img/star.png" alt="" />
                                 <div style={{ width: "70px" }}></div>
                                 <p className='day'>20/12/2024</p>
                             </div>
@@ -279,13 +276,13 @@ function Home() {
                 <footer>
                     <div className="container_footer">
                         <div className='col-left_footer'>
-                            <img className='logo logo-footer' src={Logo} alt="" />
+                            <img className='logo logo-footer' src="../img/Group_193-removebg-preview.png" alt="" />
                             <p className='slogan'>With the motto of bringing customers more value and simplifying the car buying process. </p>
                             <div className='social-box'>
-                                <img className='logo-social' src={fb} alt="" />
-                                <img className='logo-social' src={ins} alt="" />
-                                <img className='logo-social' src={youtube} alt="" />
-                                <img className='logo-social' src={twitter} alt="" />
+                                <img className='logo-social' src="../img/icon-FB.svg" alt="" />
+                                <img className='logo-social' src="../img/icon-INS.svg" alt="" />
+                                <img className='logo-social' src="../img/icon-yt.svg" alt="" />
+                                <img className='logo-social' src="../img/icon-twiiter.svg" alt="" />
                             </div>
                         </div>
 
