@@ -5,7 +5,9 @@ import Newcar from './Newcar';
 import Logo from './asets/Group_193-removebg-preview.png'
 import { Link, Routes, Route } from 'react-router-dom'
 import './App.css';
+
 import CarDetails from './pages/CarDetails';
+import CarDetails2 from './pages/CarDetails2';
 
 function App() {
   return (
@@ -45,7 +47,7 @@ function App() {
             </div>
           </div>
           <Link className='link' to="/usedcar">Used</Link>
-          <Link className='link' to="/cardetails">Offer</Link>
+          <Link className='link' to="/cardetails2">Offer</Link>
         </div>
 
 
@@ -119,7 +121,7 @@ function App() {
         <Route path="/newCar" element={<Newcar />} />
         <Route path="/FAQ" element={<FAQComponent />} />
         <Route path="/usedcar" element={<UsedCar/>}/>
-        <Route path='/cardetails' element={<CarDetails/>}/>
+        <Route path='/cardetails2' element={<CarDetails2/>}/>
       </Routes>
 
 

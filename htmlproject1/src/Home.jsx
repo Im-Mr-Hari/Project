@@ -1,26 +1,5 @@
-import videoBg from './asets/video-bground.mp4'
-import searchLogo from './asets/Search-logo.png'
 import React, { useState, useEffect } from 'react';
 import { Link, Routes, Route } from 'react-router-dom'
-// logo car
-import hondaLogo from './asets/icon-HONDA-removebg-preview.png'
-import kiaLogo from './asets/icon-kia-removebg-preview.png'
-import teslaLogo from './asets/icon-TESLA-removebg-preview.png'
-import fordLogo from './asets/icon-FORD-removebg-preview.png'
-import ferrariLogo from './asets/icon-ferrari-removebg.png'
-import mazdaLogo from './asets/logo-mazdad-removebg-preview.png'
-// khac
-import Logo from './asets/Group_193-removebg-preview.png'
-import favouriteCar from './asets/pic-of-car.jpg'
-import quality from './asets/images-removebg-preview_2-removebg-preview.png'
-import service from './asets/logo-reason-2.png'
-import prices from './asets/logo-reason-3.png'
-import star from './asets/star.png'
-import fb from './asets/icon-FB.svg'
-import fbIcon from "./asets/facebook-svgrepo-com.svg"
-import ins from './asets/icon-INS.svg'
-import youtube from './asets/icon-yt.svg'
-import twitter from './asets/icon-twiiter.svg'
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -42,7 +21,7 @@ function Home() {
                         objectFit: 'cover',
                     }}
                 >
-                    <source className='videoBg' src={videoBg} type="video/mp4" />
+                    <source className='videoBg' src="../img/video-bground.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
@@ -50,7 +29,7 @@ function Home() {
                     <p className='p-1'>WELCOME TO <span className='color'>CARBREEZY</span></p>
                     <p className='p-2'><span className='color luxury-text'>Luxury</span> Experience On Every Journey</p>
                     <button className='btn-greeting'>
-                        <img className='search-logo' src={searchLogo} alt="Search Logo" />
+                        <img className='search-logo' src="../img/Search-logo.png" alt="Search Logo" />
                         <span className='content-search'>See more</span>
                     </button>
                 </div>
@@ -60,36 +39,22 @@ function Home() {
                 <p className='title-brands'>Our premium brands</p>
 
                 {/* Our premium brands */}
-                <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <div className="d-flex justify-content-between">
-                                <img style={{ width: "200px" }} src={hondaLogo} alt="Skoda" className="carousel-logo" />
-                                <img src={kiaLogo} alt="Seat" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={teslaLogo} alt="Audi" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={ferrariLogo} alt="Audi" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={fordLogo} alt="Audi" className="carousel-logo" />
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <div className="d-flex justify-content-between">
-                                <img src={mazdaLogo} alt="Cupra" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={hondaLogo} alt="Skoda" className="carousel-logo" />
-                                <img src={kiaLogo} alt="Seat" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={teslaLogo} alt="Audi" className="carousel-logo" />
-                                <img style={{ width: "200px" }} src={ferrariLogo} alt="Audi" className="carousel-logo" />
-                            </div>
-                        </div>
+                <div className="brands-search">
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/Hondalogo.jpg" alt="Honda" /></a>
                     </div>
-
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/KIAlogo.jpg" alt="KIA" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/Teslalogo.jpg" alt="Tesla" /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/ferrarilogo.jpg" alt="Ferrari" style={{ width: "160px" }} /></a>
+                    </div>
+                    <div className="brands-logo">
+                        <a href=""><img src="../img/fordlogo.jpg" alt="Ford" /></a>
+                    </div>
                 </div>
 
                 {/* Top favourite car models */}
@@ -100,62 +65,488 @@ function Home() {
                     <p className='title-favouriteCar'>Top favourite car models</p>
 
                     <div className="container_favouriteCar">
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='favouriteCar_item'>
-                            <img className='favourite-car_img' src={favouriteCar} alt="" />
-                            <div className='info-car_box'>
-                                <p>Information of car</p>
+                        <div className="car-item width-fix">
+                            <div className='container_img-car'>
+                                <img src="../img/car.jpg" alt="" className="img-car" />
+                            </div>
+                            <div className='info-car'>
+                                <p className="name-car">(B-286) Audi Q5 35 TDI S tronic advanced </p>
+                                <p className='price-car'>853000$</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                                    <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <span className='price-withoutCar'>717000$ (Price without DPH)</span>
+                                <div className='box_info-extra'>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px" }}>
+                                            <svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "#6f7a90" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>2021</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{
+                                            textAlign: "center", display: "flex", justifyContent: "center", gap: "0px", padding: "0 8px"
+                                        }}>
+                                            < svg style={{ width: "20px", height: "20px", marginTop: "5px", color: "hsl(220,13%,50%)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-12">
+                                                <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
+                                            </svg>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>120 kW</span>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "5px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-gas-pump mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Oil</span>
+                                        </div>
+
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 10px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-tachometer-alt mr-1"></i>
+                                            <p style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>50 000 km</p>
+                                        </div>
+                                    </div>
+                                    <div className='boxColor-item'>
+                                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", gap: "8px", padding: "0 14px" }}>
+                                            <i style={{ width: "20px", height: "20px", marginTop: "8px", color: "hsl(220,13%,50%)" }} class="fas fa-cogs mr-1"></i>
+                                            <span style={{ textAlign: "center", fontFamily: "Poppins", marginTop: "5px", color: "hsl(220,13%, 50%)", marginBottom: "0" }}>Automatic</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button className='btn-MoreCar'>See more car</button>
+                    <Link to="/newCar">
+                        <button className='btn-MoreCar'>See more car</button>
+                    </Link>
                 </div>
 
 
@@ -172,17 +563,17 @@ function Home() {
 
                     <div className='container_reason-content'>
                         <div className="reason-item">
-                            <img className='logo-reason' src={quality} alt="" />
+                            <img className='logo-reason' src="../img/images-removebg-preview_2-removebg-preview.png" alt="" />
                             <p className='title-reason-content'>Quality and Reliability</p>
                             <p className='reason-content'>CarBreezy's team is always ready to support you, from car selection to after-sales maintenance, ensuring a perfect experience for each customer.</p>
                         </div>
                         <div style={{ marginTop: "20px" }} className="reason-item">
-                            <img style={{ width: "60px" }} className='logo-reason' src={service} alt="" />
+                            <img style={{ width: "60px" }} className='logo-reason' src="../img/logo-reason-2.png" alt="" />
                             <p className='title-reason-content'>Competitive Prices</p>
                             <p className='reason-content'>We offer competitive prices on both new and used cars to suit your every need and budget.</p>
                         </div>
                         <div className="reason-item">
-                            <img className='logo-reason' src={prices} alt="" />
+                            <img className='logo-reason' src="../img/logo-reason-3.png" alt="" />
                             <p className='title-reason-content'>Quality and Reliability</p>
                             <p className='reason-content'>CarBreezy range of cars that combine modern technology and high reliability. Each car in our product range is designed to meet the diverse needs of our customers.</p>
                         </div>
@@ -231,7 +622,7 @@ function Home() {
                     <div className="container-feedback">
                         <div className="feedback-item">
                             <div className='header-feedback'>
-                                <img className='star' src={star} alt="" />
+                                <img className='star' src="../img/star.png" alt="" />
                                 <div style={{ width: "70px" }}></div>
                                 <p className='day'>12/05/2024</p>
                             </div>
@@ -242,7 +633,7 @@ function Home() {
                         </div>
                         <div className="feedback-item">
                             <div className='header-feedback'>
-                                <img className='star' src={star} alt="" />
+                                <img className='star' src="../img/star.png" alt="" />
                                 <div style={{ width: "70px" }}></div>
                                 <p className='day'>06/04/2023</p>
                             </div>
@@ -253,7 +644,7 @@ function Home() {
                         </div>
                         <div className="feedback-item">
                             <div className='header-feedback'>
-                                <img className='star' src={star} alt="" />
+                                <img className='star' src="../img/star.png" alt="" />
                                 <div style={{ width: "70px" }}></div>
                                 <p className='day'>20/12/2024</p>
                             </div>
@@ -279,13 +670,13 @@ function Home() {
                 <footer>
                     <div className="container_footer">
                         <div className='col-left_footer'>
-                            <img className='logo logo-footer' src={Logo} alt="" />
+                            <img className='logo logo-footer' src="../img/Group_193-removebg-preview.png" alt="" />
                             <p className='slogan'>With the motto of bringing customers more value and simplifying the car buying process. </p>
                             <div className='social-box'>
-                                <img className='logo-social' src={fb} alt="" />
-                                <img className='logo-social' src={ins} alt="" />
-                                <img className='logo-social' src={youtube} alt="" />
-                                <img className='logo-social' src={twitter} alt="" />
+                                <img className='logo-social' src="../img/icon-FB.svg" alt="" />
+                                <img className='logo-social' src="../img/icon-INS.svg" alt="" />
+                                <img className='logo-social' src="../img/icon-yt.svg" alt="" />
+                                <img className='logo-social' src="../img/icon-twiiter.svg" alt="" />
                             </div>
                         </div>
 
@@ -349,14 +740,14 @@ function Home() {
                         10/12/2024 - 08:07 - TPHCM
                     </marquee>
                 </footer>
-            </div>
+            </div >
 
             <Routes>
                 <Route path='/FAQ' element={<FAQComponent />}></Route>
             </Routes>
 
 
-        </div>
+        </div >
     );
 }
 

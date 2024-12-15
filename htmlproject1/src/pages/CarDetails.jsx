@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faShareFromSquare, faTachometerAlt, faGasPump, faCar, faSquare, faCogs, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import CarDetailstest from './TEST';
 
 function CarDetails() {
     const [mainImage, setMainImage] = useState("./img/porsche6.jpg");
@@ -12,21 +13,19 @@ function CarDetails() {
         "./img/porsche1.jpg",
     ]);
 
+    // Định nghĩa hàm handleThumbnailClick
     const handleThumbnailClick = (image) => {
-        const updatedThumbnails = [...thumbnailImage, mainImage];
-        const filteredThumbnails = updatedThumbnails.filter((img) => img !== image);
-        setMainImage(image);
-        setThumbnailImage(filteredThumbnails);
+        setMainImage(image); // Cập nhật ảnh chính
     };
 
     return (
         <div>
-            <div>
+            <div className='vsit-history'>
                 thanh dieu huong truy cap
             </div>
             <div className='viewcar'>
                 <div className='pic'>
-                    <div><img src={mainImage} alt="Main Car" /></div>
+                    <div><img src={mainImage} alt="Main Car" style={{height:"600px"}} /></div>
                     <div className='pic-item'>
                         {thumbnailImage.map((image, index) => (
                             <div key={index} onClick={() => handleThumbnailClick(image)}>
@@ -37,19 +36,19 @@ function CarDetails() {
                 </div>
                 <div className='info'>
                     <h1>Tên Xe</h1>
-                    <span>853.000$</span>
+                    <span style={{color:"#f31313"}}>853.000$</span>
                     <div className='detail-buttons'>
-                        <button className='detail-btn detail-btn-phone'>
+                        <button className='detail-btn-phone'>
                             <FontAwesomeIcon icon={faPhone} 
                             className="icon" />
                             Call Us
                         </button>
-                        <button className='detail-btn detail-btn-mail'>
+                        <button className='detail-btn-mail'>
                             <FontAwesomeIcon icon={faEnvelope} 
                             className="icon" />
                             Email
                         </button>
-                        <button className='detail-btn detail-btn-share'>
+                        <button className='detail-btn-share'>
                             <FontAwesomeIcon icon={faShareFromSquare} 
                             className="icon" />
                             Share
@@ -89,7 +88,7 @@ function CarDetails() {
                             </div>
                         </div>
                         <div>
-                            <div className='contact-us'>
+                            <div className='details-contact-us'>
                                 <div className='chil-contacts'>
                                     <FontAwesomeIcon icon={faInstagram}  
                                     className="icon" />
@@ -100,19 +99,19 @@ function CarDetails() {
                                 </div>
                             </div>                            
                         </div>
-                        <div className='sign-up'>
+                        <div className='details-sign-up'>
                             Sign up for a test drive
                         </div>
                     </div>
                 </div>
             </div>
+            <div className='over-view2'>
+                <div className="center-line"></div>
+                    <h1>Vehicle Overview</h1>
+            </div>
             <div className='overview'>
-                <div >
-                    <div className="center-line"></div>
-                    Vehicle Overview
-                </div>
-                <div>
-                    <img src="./img/info.jpg" alt="info" />
+                <div className='details-info'>
+                    <CarDetailstest />
                 </div>
             </div>
             <div className='small-banner'>
@@ -125,7 +124,7 @@ function CarDetails() {
                         <span className='buy-sale2'>Sell Car Now</span>
                     </div>     
                 </div>                
-            </div>
+            </div>  
         </div>
     );
 }
