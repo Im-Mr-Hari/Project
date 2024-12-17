@@ -81,7 +81,23 @@ const Ferrari = () => {
         color: "Red",
         imgSrc:"./img/ferrari121.jpg",                 
         year: 2020
-    }
+    },
+    {
+      id: "35",
+      brand:"FERRARI",
+      name: "Ferrari 488",
+      model: "SUPERCAR",
+      price: 249.150,
+      seats: 2,
+      fuel: "Gasoline",
+      transmission:"7-speed Dual-clutch",
+      height:"1211 mm",
+      width: "1953 mm",
+      length: "4566 mm",
+      color: "Red",
+      imgSrc:"./img/ferrari26.jpg", 
+      year: 2016
+  }
   ];
 
   return (

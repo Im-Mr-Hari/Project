@@ -82,6 +82,22 @@ const Mazda = () => {
         color: "Red",
         imgSrc:"./img/mazda21.jpg",                 
         year: 2022
+    },
+    {
+      id: "34",
+      brand:"MAZDA",
+      name: "Mazda CX-5 2.0 AT 2016",
+      model: "CUV",
+      price: 32150,
+      seats: 5,
+      fuel: "Gasoline",
+      transmission:"6-speed Automatic",
+      height:"1680 mm",
+      width: "1840 mm",
+      length: "4555 mm",
+      color: "Black",
+      imgSrc:"./img/mazda26.jpg", 
+      year: 2016
     }
   ];
 

@@ -81,7 +81,23 @@ const Honda = () => {
         color: "Green",
         imgSrc:"./img/honda21.jpg",              
         year: 2019
-    }
+    },
+    {
+        id: "33",
+        brand:"HONDA",
+        name: "Honda City RS 2021",
+        model: "SEDAN",
+        price: 20000,
+        seats: 5,
+        fuel: "Gasoline",
+        transmission:"CVT",
+        height:"1467 mm",
+        width: "1748 mm",
+        length: "4553 mm",
+        color: "Red",
+        imgSrc:"./img/honda26.jpg", 
+        year: 2021
+     }
   ];
 
   return (

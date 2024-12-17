@@ -626,46 +626,6 @@ button {
   transform: scale(1.05);
 }
 
-/* .search-filter {
-  display: flex;
-  margin: 20px auto;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  max-width: 80% !important;
-}
-
-.search {
-  position: relative;
-  display: inline-block;
-}
-
-.search-filter .search input {
-  width: 100%;
-  border: 2px solid gray;
-  border-radius: 5px;
-  height: 50px;
-  padding-left: 40px;
-  box-sizing: border-box;
-}
-
-.search-icon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  color: gray;
-  font-size: 18px;
-  pointer-events: none;
-}
-
-.mb-filter {
-  border: 1.5px solid;
-  padding: 12px 8px;
-  width: 85px;
-  border-radius: 6px;
-} */
-
 .brands-class {
   margin: 20px auto;
   max-width: 100%;
@@ -1009,17 +969,26 @@ button {
   }
 }
 /* CONTACT US */
-.cont-us-banner{
+.cont-us-banner {
   background-image: url(../public/img/contactusbanner.jpg);
   background-size: cover;
   background-position: center;
-  filter: brightness(50%); 
   height: 700px;
   position: relative;
   z-index: 1;
 }
 
-.cont-us_content{
+.contus-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.cont-us_content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1028,13 +997,13 @@ button {
   font-weight: 700;
   font-size: xxx-large;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .cont-us-info{
   display: flex;
   gap: 50px;
-  margin: 50px 400px;
+  margin: 50px 10%;
 }
 
 .cont-us-getin{
@@ -1064,7 +1033,7 @@ button {
 
 .cont-us_ggmap{
   width: 400px;
-  height: 400px;  
+  height: 650px;  
   border-radius: 10px;
 }
 
@@ -1091,7 +1060,7 @@ button {
 
 .contus-name_mail{
   display: flex;
-  gap: 30px;
+  gap: 50px;
   margin: 20px 0;
 }
 
@@ -1100,7 +1069,7 @@ button {
 }
 
 .contus-Subject input{
-  width: 81%;
+  width: 85%;
   background-color: #E5E7EB;
 }
 
@@ -1110,9 +1079,15 @@ button {
 
 .contus-questions textarea{
   border-radius: 5px;
-  width: 81%;
+  width: 85%;
   height: 150px;
   background-color: #E5E7EB;
+}
+
+.contus-btn button:hover{
+  border: #BD1919 solid 1px;
+  background-color: #fff;
+  color: #BD1919;
 }
 
 .contus-btn button{

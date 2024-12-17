@@ -82,6 +82,22 @@ const Kia = () => {
         color: "black",
         imgSrc:"./img/kia21.jpg", 
         year: 2022
+    },
+    {
+        id: "32",
+        brand:"KIA",
+        name: "Kia Sonet 1.5 Premium 2022",
+        model: "SUV",
+        price: 15000,
+        seats: 5,
+        fuel: "Gasoline",
+        transmission:"CVT",
+        height:"1642 mm",
+        width: "1790 mm",
+        length: "4120 mm",
+        color: "Red",
+        imgSrc:"./img/kia26.jpg", 
+        year: 2022
     }
   ];
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Routes, Route } from 'react-router-dom'
-import CarMenu from './FavouriteCar';
+import CarMenu from './pages/FavouriteCar';
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import FAQComponent from '../FAQ';
+import FAQComponent from './FAQ';
 
 function Home() {
     return (

@@ -72,6 +72,7 @@ function ContactUs() {
     return ( 
         <div style={{marginTop: "70px"}}>
             <div className="cont-us-banner">
+                <div className="contus-overlay"></div>
                 <span className="cont-us_content">
                     <h1>CONTACT US</h1>
                 </span>
@@ -101,7 +102,7 @@ function ContactUs() {
                             </span>
                         </div>
                         <div className="cont-us_ggmap">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253163053173!2d56.66372207616801!3d5.786376989363044!2m3!1f0!2f0!3f0!3m2!1i524!2i768!4f13.1!3m3!1m2!1s0x31752ed2182fc277%3A0xd13475e1f695561e!2zU2nDqnUgVGjhu4sgxJBp4buHbiBNw6F5IE7hu5lpIFRo4bqldCBDaOG7oyBM4bubbg!5e0!3m2!1sen!2s!4v1734391378686!5m2!1sen!2s" style={{width: "420px", height: "420px"}}></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253163053173!2d56.66372207616801!3d5.786376989363044!2m3!1f0!2f0!3f0!3m2!1i524!2i768!4f13.1!3m3!1m2!1s0x31752ed2182fc277%3A0xd13475e1f695561e!2zU2nDqnUgVGjhu4sgxJBp4buHbiBNw6F5IE7hu5lpIFRo4bqldCBDaOG7oyBM4bubbg!5e0!3m2!1sen!2s!4v1734391378686!5m2!1sen!2s" style={{width: "420px", height: "100%"}}></iframe>
                         </div>  
                     </div>                    
                 </div>
@@ -113,11 +114,11 @@ function ContactUs() {
                     <div className="contus-aboutus">
                         <h1>About Us</h1>
                         <div className="contus-introduce">
-                            <div>
+                            <div style={{width: "85%"}}>
                                 <span style={{color: "#BD1919"}}>CarBreezyp</span> is a leading automotive digital marketplace that seeks to make car buyingand selling easy, transparent and efficient.
                                 Your car buying destiny is in your hands, but we will help you every step of the way. Webuilt this site to make car buying as fast and easy as possible.
                             </div>
-                            <div>
+                            <div style={{width: "85%"}}>
                                 <span style={{color: "#BD1919"}}>CarBreezy</span> has built a trusted brand and a strong reputation for providing consumers withuseful tools, research, market context and pricing transparency as they embark on theircar-buying journey. The Company is bringing more of the purchasing process online by
                                 allowing consumers to find a vehicle that is marginRight for them and complete their purchasewith all from the comfort of their home.
                             </div>

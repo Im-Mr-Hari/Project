@@ -52,6 +52,22 @@ const Ford = () => {
       transmission: "7-speed automatic",
       imgSrc: "./img/ford21.jpg",
     },
+    {
+      id: "31",
+      brand:"FORD",
+      name: "Ford Ranger XLS 2.2L 4x2 AT 2019",
+      model: "PICKUP",
+      price: 25.000,
+      seats: 5,
+      fuel: "Diesel",
+      transmission:"6 speed Automatic",
+      height:"1830 mm",
+      width: "1860 mm",
+      length: "5362 mm",
+      color: "White",
+      imgSrc:"./img/ford26.jpg", 
+      year: 2019
+  },
   ];
 
   return (

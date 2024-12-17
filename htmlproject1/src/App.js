@@ -1,6 +1,6 @@
 import FAQComponent from './FAQ';
 import UsedCar from './pages/UsedCar';
-import Home from './pages/Home';
+import Home from './Home';
 import Newcar from './Newcar';
 import Logo from './asets/Group_193-removebg-preview.png'
 import { Link, Routes, Route } from 'react-router-dom'
