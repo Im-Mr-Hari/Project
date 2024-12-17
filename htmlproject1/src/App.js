@@ -1,13 +1,20 @@
 import FAQComponent from './FAQ';
 import UsedCar from './pages/UsedCar';
-import Home from './Home';
+import Home from './pages/Home';
 import Newcar from './Newcar';
 import Logo from './asets/Group_193-removebg-preview.png'
 import { Link, Routes, Route } from 'react-router-dom'
 import './App.css';
 
 import CarDetails from './pages/CarDetails';
-import CarDetails2 from './pages/CarDetails2';
+import Honda from './pages/Honda';
+import Ford from './pages/Ford';
+import Kia from './pages/Kia';
+import Mazda from './pages/Mazda';
+import Tesla from './pages/Tesla';
+import Ferrari from './pages/Ferrarri';
+import ContactUs from './pages/ContactUs';
+
 
 function App() {
   return (
@@ -47,12 +54,12 @@ function App() {
             </div>
           </div>
           <Link className='link' to="/usedcar">Used</Link>
-          <Link className='link' to="/cardetails2">Offer</Link>
+          <Link className='link' to="/cardetails">Offer</Link>
         </div>
 
 
         <div className='nav-right'>
-          <Link className='link' to="">Contact</Link>
+          <Link className='link' to="/contactus">Contact</Link>
           <Link className='link' to="/FAQ">FAQ</Link>
         </div>
 
@@ -78,19 +85,19 @@ function App() {
                 </li>
               </div>
             </Link>
-            <div className='box-li-span_menu'>
+            <div className="box-li-span_menu">
               <li>
                 <div className="navbar">
                   <div className="navbar-container">
                     <div className="dropdown">
                       <button className="dropdown-toggle brands-res">Brands</button>
                       <ul className="dropdown-menu">
-                        <li><a href="/honda" className="dropdown-item">Honda</a></li>
-                        <li><a href="/kia" className="dropdown-item">KIA</a></li>
-                        <li><a href="/ford" className="dropdown-item">Ford</a></li>
-                        <li><a href="/tesla" className="dropdown-item">Tesla</a></li>
-                        <li><a href="/ferrari" className="dropdown-item">Ferrari</a></li>
-                        <li><a href="/mazda" className="dropdown-item">Mazda</a></li>
+                        <li><Link to="/honda" className="dropdown-item">Honda</Link></li>
+                        <li><Link to="/kia" className="dropdown-item">KIA</Link></li>
+                        <li><Link to="/ford" className="dropdown-item">Ford</Link></li>
+                        <li><Link to="/tesla" className="dropdown-item">Tesla</Link></li>
+                        <li><Link to="/ferrari" className="dropdown-item">Ferrari</Link></li>
+                        <li><Link to="/mazda" className="dropdown-item">Mazda</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -121,7 +128,14 @@ function App() {
         <Route path="/newCar" element={<Newcar />} />
         <Route path="/FAQ" element={<FAQComponent />} />
         <Route path="/usedcar" element={<UsedCar/>}/>
-        <Route path='/cardetails2' element={<CarDetails2/>}/>
+        <Route path='/contactus' element={<ContactUs/>}/>
+        <Route path='/cardetails' element={<CarDetails/>}/>
+        <Route path='/honda' element={<Honda/>}/>
+        <Route path='/ford' element={<Ford/>}/>
+        <Route path='/kia' element={<Kia/>}/>
+        <Route path='/mazda' element={<Mazda/>}/>
+        <Route path='/tesla' element={<Tesla/>}/>
+        <Route path='/ferrari' element={<Ferrari/>}/>
       </Routes>
 
 

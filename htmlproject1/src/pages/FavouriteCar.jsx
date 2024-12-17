@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGasPump, faTachometerAlt, faCogs, faFilter, faCalendar, faCalendarAlt, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 // Dữ liệu JSON
 const carData = [
@@ -10,18 +12,18 @@ const carData = [
     price: 39000,
     seats: 7,
     fuel: "Diesel",
-    transmission: "10-speed automatic",
+    transmission: "10AT",
     height: "1837 mm",
     width: "1860 mm",
     length: "4892 mm",
     color: "Black",
-    imgSrc: ["./img/ford01.jpg", "./img/ford02.jpg", "./img/ford03.jpg"],
+    imgSrc: ["../img/ford01.jpg"],
     year: 2021,
   },
   {
     id: "07",
     brand: "HONDA",
-    name: "Honda City L 2023",
+    name: "Honda City L 1.5L CVT 4x2 2023",
     model: "SEDAN",
     price: 20500,
     seats: 5,
@@ -31,7 +33,7 @@ const carData = [
     width: "1748 mm",
     length: "4580 mm",
     color: "Green",
-    imgSrc: ["./img/honda06.jpg", "./img/honda07.jpg", "./img/honda08.jpg"],
+    imgSrc: ["./img/honda06.jpg"],
     year: 2023,
   },
   {
@@ -47,13 +49,13 @@ const carData = [
     width: "1800 mm",
     length: "4540 mm",
     color: "White",
-    imgSrc: ["./img/kia01.jpg", "./img/kia02.jpg", "./img/kia03.jpg"],
+    imgSrc: ["./img/kia02.jpg"],
     year: 2023,
   },
   {
     id: "16",
     brand: "MAZDA",
-    name: "Mazda 3 1.5 Luxury 2022",
+    name: "Mazda 3 1.5L Luxury AT 4x2 2022",
     model: "SEDAN",
     price: 20000,
     seats: 5,
@@ -63,13 +65,13 @@ const carData = [
     width: "1795 mm",
     length: "4660 mm",
     color: "Red",
-    imgSrc: ["./img/mazda01.jpg", "./img/mazda02.jpg", "./img/mazda03.jpg"],
+    imgSrc: ["./img/mazda02.jpg"],
     year: 2022,
   },
   {
     id: "21",
     brand: "TESLA",
-    name: "Tesla Cybertruck",
+    name: "Tesla Cybertruck Dual Motor AWD Electric 2024",
     model: "PICKUP",
     price: 60000,
     seats: 5,
@@ -79,23 +81,23 @@ const carData = [
     width: "2030 mm",
     length: "5890 mm",
     color: "Iron",
-    imgSrc: ["./img/tesla01.jpg", "./img/tesla02.jpg", "./img/tesla03.jpg"],
+    imgSrc: ["./img/tesla02.jpg"],
     year: 2022,
   },
   {
     id: "26",
     brand: "FERRARI",
-    name: "Ferrari Roma Spider",
+    name: "Ferrari Roma Spider 3.9L V8 Twin-Turbo RWD 2024",
     model: "SUPERCAR",
     price: 230000,
     seats: 2,
     fuel: "Gasoline",
-    transmission: "8-speed dual-clutch",
+    transmission: "8DCT",
     height: "1300 mm",
     width: "1920 mm",
     length: "4700 mm",
     color: "Silver",
-    imgSrc: ["./img/ferrari01.jpg", "./img/ferrari02.jpg", "./img/ferrari03.jpg"],
+    imgSrc: ["./img/ferrari01.jpg"],
     year: 2022,
   },
 ];
@@ -103,32 +105,46 @@ const carData = [
 const CarMenu = () => {
   return (
     <div className="car-menu">
-      <h2>Top Favourite Car Models</h2>
       <div className="car-grid">
         {carData.map((car) => (
-          <div className="car-item" key={car.id}>
+          <div className="car-item_menu" key={car.id}>
             <img
               src={car.imgSrc[0]}
               alt={car.name}
-              className="car-image"
+              className="car-image_menu"
             />
-            <h3>{car.name}</h3>
-            <p>
-              <strong>Price:</strong> ${car.price}
-            </p>
-            <p>
-              <strong>Brand:</strong> {car.brand}
-            </p>
-            <p>
-              <strong>Model:</strong> {car.model}
-            </p>
-            <p>
-              <strong>Year:</strong> {car.year}
-            </p>
+            <div className="container_carMenu-infor">
+              <p className="nameCar_menu">{car.name}</p>
+              <p className="priceCar_menu">
+                {car.price}$
+              </p>
+              <div className="carMenu-infor-detail">
+                <div className="carMenu-infor-item">
+                  <p>
+                    <strong><FontAwesomeIcon icon={faCalendarAlt} className="icon-menu" /></strong> <span style={{ paddingLeft: "3px" }}>{car.year}</span>
+                  </p>
+                </div>
+                <div className="carMenu-infor-item">
+                  <p>
+                    <strong><FontAwesomeIcon icon={faUsers} className="icon-menu" /></strong>  <span style={{ paddingLeft: "3px" }}>{car.seats}</span>
+                  </p>
+                </div>
+                <div className="carMenu-infor-item">
+                  <p style={{ paddingLeft: "6px", paddingRight: "6px" }}>
+                    <strong><FontAwesomeIcon icon={faGasPump} className="icon-menu" /></strong> {car.fuel}
+                  </p>
+                </div>
+                <div className="carMenu-infor-item">
+                  <p>
+                    <strong><FontAwesomeIcon icon={faCogs} className="icon-menu" /></strong> <span className="temp_icon">{car.transmission}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+    </div >
   );
 };
 

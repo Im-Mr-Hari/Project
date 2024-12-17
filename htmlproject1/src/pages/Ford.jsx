@@ -1,6 +1,6 @@
 import React from "react";
 
-const FordList = () => {
+const Ford = () => {
   const cars = [
     {
       id: "01",
@@ -83,4 +83,4 @@ const FordList = () => {
   );
 };
 
-export default FordList;
+export default Ford;

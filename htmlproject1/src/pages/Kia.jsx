@@ -1,6 +1,6 @@
 import React from "react";
 
-const KiaList = () => {
+const Kia = () => {
   const cars = [
     {
         id: "11",
@@ -114,4 +114,4 @@ const KiaList = () => {
   );
 };
 
-export default KiaList;
+export default Kia;
