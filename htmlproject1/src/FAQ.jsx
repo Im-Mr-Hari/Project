@@ -1,5 +1,6 @@
 import { Link, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 const FAQComponent = () => {
     // State lưu trạng thái mở/đóng
@@ -101,7 +102,7 @@ const FAQComponent = () => {
             </div>
 
             {/* footer */}
-            <footer>
+            {/* <footer>
                 <div className="container_footer">
                     <div className='col-left_footer'>
                         <img className='logo logo-footer' src="../img/Group_193-removebg-preview.png" alt="" />
@@ -173,7 +174,8 @@ const FAQComponent = () => {
                 <marquee width="100%" direction="left" height="20px">
                     10/12/2024 - 08:07 - TPHCM
                 </marquee>
-            </footer>
+            </footer> */}
+            <Footer />
         </div >
     );
 };
