@@ -222,6 +222,9 @@ const UsedCarMenu = () => {
               <strong>Price:</strong> {car.price}
             </p>
             <p>
+              <strong>New Car Price:</strong> {car.newcarPrice}
+            </p>
+            <p>
               <strong>Fuel:</strong> {car.fuel}
             </p>
             <p>

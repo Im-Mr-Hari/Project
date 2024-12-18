@@ -14,6 +14,7 @@ import Mazda from './pages/Mazda';
 import Tesla from './pages/Tesla';
 import Ferrari from './pages/Ferrarri';
 import ContactUs from './pages/ContactUs';
+import Offers from './Offers'
 
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
             </div>
           </div>
           <Link className='link' to="/usedcar">Used</Link>
-          <Link className='link' to="/cardetails">Offer</Link>
+          <Link className='link' to="/offer">Offer</Link>
         </div>
 
 
@@ -129,13 +130,14 @@ function App() {
         <Route path="/FAQ" element={<FAQComponent />} />
         <Route path="/usedcar" element={<UsedCar/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
-        <Route path='/cardetails' element={<CarDetails/>}/>
+        <Route path='/offer' element={<Offers/>}/>
         <Route path='/honda' element={<Honda/>}/>
         <Route path='/ford' element={<Ford/>}/>
         <Route path='/kia' element={<Kia/>}/>
         <Route path='/mazda' element={<Mazda/>}/>
         <Route path='/tesla' element={<Tesla/>}/>
         <Route path='/ferrari' element={<Ferrari/>}/>
+        <Route path='/usedcar/:id' element={<CarDetails/>}/>
       </Routes>
 
 
