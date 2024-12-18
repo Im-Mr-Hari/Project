@@ -1,6 +1,6 @@
-import { width } from "@mui/system";
 
-function Cuv() {
+
+function CUV() {
     const cars = [
         {
             id: "05",
@@ -15,11 +15,7 @@ function Cuv() {
             width: "1935 mm",
             length: "4630 mm",
             color: "White",
-            imgSrc:["./img/ford21.jpg", 
-                    "./img/ford22.jpg",
-                    "./img/ford23.jpg", 
-                    "./img/ford24.jpg", 
-                    "./img/ford25.jpg"],
+            imgSrc:"./img/ford21.jpg",                     
             year: 2023
         },
         {
@@ -35,11 +31,7 @@ function Cuv() {
             width: "1855 mm",
             length: "4584 mm",
             color: "Green",
-            imgSrc:["./img/honda16.jpg", 
-                    "./img/honda17.jpg",
-                    "./img/honda18.jpg", 
-                    "./img/honda19.jpg", 
-                    "./img/honda20.jpg"],
+            imgSrc:"./img/honda16.jpg", 
             year: 2022
         },
         {
@@ -55,11 +47,7 @@ function Cuv() {
             width: "1855 mm",
             length: "4584 mm",
             color: "Green",
-            imgSrc:["./img/honda21.jpg", 
-                    "./img/honda22.jpg",
-                    "./img/honda23.jpg", 
-                    "./img/honda24.jpg", 
-                    "./img/honda25.jpg"],
+            imgSrc:"./img/honda21.jpg", 
             year: 2019
         },
         {
@@ -75,11 +63,7 @@ function Cuv() {
             width: "1840 mm",
             length: "4555 mm",
             color: "Black",
-            imgSrc:["./img/mazda26.jpg", 
-                    "./img/mazda27.jpg",
-                    "./img/mazda28.jpg", 
-                    "./img/mazda29.jpg", 
-                    "./img/mazda30.jpg"],
+            imgSrc:"./img/mazda26.jpg", 
             year: 2016
         }
     ]
@@ -114,4 +98,4 @@ function Cuv() {
      );
 }
 
-export default Cuv;
+export default CUV;

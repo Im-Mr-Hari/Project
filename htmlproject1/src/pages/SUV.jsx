@@ -1,5 +1,5 @@
 
-function Suv() {
+function SUV() {
     const cars = [
         {
             id: "01",
@@ -14,11 +14,7 @@ function Suv() {
             width: "1860 mm",
             length:"4892 mm",
             color:"Black",
-            imgSrc:["./img/ford01.jpg", 
-                    "./img/ford02.jpg",
-                    "./img/ford03.jpg", 
-                    "./img/ford04.jpg", 
-                    "./img/ford05.jpg"],
+            imgSrc:"./img/ford01.jpg", 
             year: 2021        
         },
         {
@@ -34,11 +30,7 @@ function Suv() {
             width: "1860 mm",
             length: "4892 mm",
             color:"Blue",
-            imgSrc:["./img/ford06.jpg", 
-                    "./img/ford07.jpg",
-                    "./img/ford08.jpg", 
-                    "./img/ford09.jpg", 
-                    "./img/ford10.jpg"],
+            imgSrc:"./img/ford06.jpg", 
             year: 2021
         },
         {
@@ -54,11 +46,7 @@ function Suv() {
             width: "1860 mm",
             length: "4892 mm",
             color:"Blue",
-            imgSrc:["./img/ford11.jpg", 
-                    "./img/ford12.jpg",
-                    "./img/ford13.jpg", 
-                    "./img/ford14.jpg", 
-                    "./img/ford15.jpg"],
+            imgSrc:"./img/ford11.jpg", 
             year: 2021
         },
         {
@@ -74,11 +62,7 @@ function Suv() {
             width: "1935 mm",
             length: "4630 mm",
             color: "White",
-            imgSrc:["./img/ford21.jpg", 
-                    "./img/ford22.jpg",
-                    "./img/ford23.jpg", 
-                    "./img/ford24.jpg", 
-                    "./img/ford25.jpg"],
+            imgSrc:"./img/ford21.jpg", 
             year: 2023
         },
         {
@@ -94,11 +78,7 @@ function Suv() {
             width: "1800 mm",
             length: "4540 mm",
             color: "White",
-            imgSrc:["./img/kia01.jpg", 
-                    "./img/kia02.jpg",
-                    "./img/kia03.jpg", 
-                    "./img/kia04.jpg", 
-                    "./img/kia05.jpg"],
+            imgSrc:"./img/kia01.jpg", 
             year: 2023
         },
         {
@@ -114,11 +94,7 @@ function Suv() {
             width: "1800 mm",
             length: "4540 mm",
             color: "White",
-            imgSrc:["./img/kia06.jpg", 
-                    "./img/kia07.jpg",
-                    "./img/kia08.jpg", 
-                    "./img/kia09.jpg", 
-                    "./img/kia10.jpg"],
+            imgSrc:"./img/kia06.jpg", 
             year: 2023            
         },
         {
@@ -134,11 +110,7 @@ function Suv() {
             width: "1840 mm",
             length: "4550 mm",
             color: "Red",
-            imgSrc:["./img/mazda21.jpg", 
-                    "./img/mazda22.jpg",
-                    "./img/mazda23.jpg", 
-                    "./img/mazda24.jpg", 
-                    "./img/mazda25.jpg"],
+            imgSrc:"./img/mazda21.jpg", 
             year: 2022
         },
         {
@@ -154,11 +126,7 @@ function Suv() {
             width: "1790 mm",
             length: "4120 mm",
             color: "Red",
-            imgSrc:["./img/kia26.jpg", 
-                    "./img/kia27jpg",
-                    "./img/kia28.jpg", 
-                    "./img/kia29.jpg", 
-                    "./img/kia30.jpg"],
+            imgSrc:"./img/kia26.jpg", 
             year: 2022
         }
     ]
@@ -192,4 +160,4 @@ function Suv() {
      );
 }
 
-export default Suv;
+export default SUV;

@@ -1,8 +1,15 @@
+import { Link, Routes, Route } from 'react-router-dom'
 import React, {useState} from 'react';
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faSearch, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import CUV from './CUV';
+import SUV from './SUV';
+import MPV from './MPV';
+import SEDAN from './SEDAN';
+import PICKUP from './PICKUP';
+import SUPERCAR from './SUPERCAR';
 
 function UsedCar() {
     const nav = useNavigate();
@@ -258,13 +265,12 @@ function UsedCar() {
                     </div>
                     <div className='class'>
                         Class: 
-                        <a href="">CUV</a>
-                        <a href="">SUV</a>
-                        <a href="">MPV</a>
-                        <a href="">SEDAN</a>
-                        <a href="">PICKUP</a>
-                        <a href="">COUPE</a>
-                        <a href="">SUPPER CAR</a>
+                        <Link to="/cuv" >CUV</Link>
+                        <Link to="/suv">SUV</Link>
+                        <Link to="/mpv">MPV</Link>
+                        <Link to='/sedan'>SEDAN</Link>
+                        <Link to='/pickup'>PICKUP</Link>
+                        <Link to='/supercar'>SUPERCAR</Link>
                     </div>
                 </div>
             </div>
@@ -388,6 +394,14 @@ function UsedCar() {
                     </div>
                 </div>
             </div>
+            <Routes>
+                <Route path='/cuv' element={<CUV/>}/>
+                <Route path='/suv' element={<SUV/>}/>
+                <Route path='/mpv' element={<MPV/>}/>
+                <Route path='/sedan' element={<SEDAN/>}/>
+                <Route path='/pickup' element={<PICKUP/>}/>
+                <Route path='/supercar' element={<SUPERCAR/>}/>
+            </Routes>
         </div>
      );
 }

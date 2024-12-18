@@ -14,6 +14,13 @@ import Mazda from './pages/Mazda';
 import Tesla from './pages/Tesla';
 import Ferrari from './pages/Ferrarri';
 import ContactUs from './pages/ContactUs';
+import Offers from './Offers'
+import CUV from './pages/CUV';
+import SUV from './pages/SUV';
+import MPV from './pages/MPV';
+import SEDAN from './pages/SEDAN';
+import PICKUP from './pages/PICKUP';
+import SUPERCAR from './pages/SUPERCAR';
 
 function App() {
 
@@ -137,7 +144,13 @@ function App() {
         <Route path='/tesla' element={<Tesla/>}/>
         <Route path='/ferrari' element={<Ferrari/>}/>
         <Route path='/usedcar/:id' element={<CarDetails/>}/>
-      </Routes>
+        <Route path='/cuv' element={<CUV/>}/>
+        <Route path='/suv' element={<SUV/>}/>
+        <Route path='/mpv' element={<MPV/>}/>
+        <Route path='/sedan' element={<SEDAN/>}/>
+        <Route path='/pickup' element={<PICKUP/>}/>
+        <Route path='/supercar' element={<SUPERCAR/>}/>
+      </Routes> 
 
 
     </div >

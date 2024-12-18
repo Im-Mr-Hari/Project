@@ -1,6 +1,6 @@
 
 
-function Supercar() {
+function SUPERCAR() {
     const cars = [
         {
             id: "26",
@@ -15,11 +15,7 @@ function Supercar() {
             width: "1920 mm",
             length: "4700 mm",
             color: "Silver",
-            imgSrc:["./img/ferrari01.jpg", 
-                    "./img/ferrari02.jpg",
-                    "./img/ferrari03.jpg", 
-                    "./img/ferrari04.jpg", 
-                    "./img/ferrari05.jpg"],
+            imgSrc :"./img/ferrari01.jpg", 
             year: 2022
         },
         {
@@ -35,11 +31,7 @@ function Supercar() {
             width: "1980 mm",
             length: "4700 mm",
             color: "Silver",
-            imgSrc:["./img/ferrari06.jpg", 
-                    "./img/ferrari07.jpg",
-                    "./img/ferrari08.jpg", 
-                    "./img/ferrari09.jpg", 
-                    "./img/ferrari10.jpg"],
+            imgSrc:"./img/ferrari06.jpg", 
             year: 2021
         },
         {
@@ -55,11 +47,7 @@ function Supercar() {
             width: "1940 mm",
             length: "4570 mm",
             color: "Red",
-            imgSrc:["./img/ferrari11.jpg", 
-                    "./img/ferrari12.jpg",
-                    "./img/ferrari13.jpg", 
-                    "./img/ferrari14.jpg", 
-                    "./img/ferrari15.jpg"],
+            imgSrc:"./img/ferrari11.jpg", 
             year: 2020
         },
         {
@@ -75,11 +63,7 @@ function Supercar() {
             width: "1980 mm",
             length: "4540 mm",
             color: "Blue",
-            imgSrc:["./img/ferrari16.jpg", 
-                    "./img/ferrari17.jpg",
-                    "./img/ferrari18.jpg", 
-                    "./img/ferrari19.jpg", 
-                    "./img/ferrari20.jpg"],
+            imgSrc:"./img/ferrari16.jpg", 
             year: 2019
         },
         {
@@ -95,11 +79,7 @@ function Supercar() {
             width: "1950 mm",
             length: "4650 mm",
             color: "Red",
-            imgSrc:["./img/ferrari21.jpg", 
-                    "./img/ferrari22.jpg",
-                    "./img/ferrari23.jpg", 
-                    "./img/ferrari24.jpg", 
-                    "./img/ferrari25.jpg"],
+            imgSrc:"./img/ferrari21.jpg", 
             year: 2020
         },
         {
@@ -115,11 +95,7 @@ function Supercar() {
             width: "1953 mm",
             length: "4566 mm",
             color: "Red",
-            imgSrc:["./img/ferrari26.jpg", 
-                    "./img/ferrari27.jpg",
-                    "./img/ferrari28.jpg", 
-                    "./img/ferrari29.jpg", 
-                    "./img/ferrari30.jpg"],
+            imgSrc:"./img/ferrari26.jpg", 
             year: 2016
         }
     ]
@@ -152,4 +128,4 @@ function Supercar() {
      );
 }
 
-export default Supercar;
+export default SUPERCAR;

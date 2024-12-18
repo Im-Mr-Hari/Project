@@ -1,5 +1,5 @@
 
-function Sedan() {
+function SEDAN() {
     const cars =[
         {
             id: "07",
@@ -14,11 +14,7 @@ function Sedan() {
             width: "1748 mm",
             length: "4580 mm",
             color: "Green",
-            imgSrc:["./img/honda06.jpg", 
-                    "./img/honda07.jpg",
-                    "./img/honda08.jpg", 
-                    "./img/honda09.jpg", 
-                    "./img/honda10.jpg"],
+            imgSrc : "./img/honda06.jpg", 
             year: 2023
         },
         {
@@ -34,11 +30,7 @@ function Sedan() {
             width: "1802 mm",
             length: "4678 mm",
             color: "White",
-            imgSrc:["./img/honda11.jpg", 
-                    "./img/honda12.jpg",
-                    "./img/honda13.jpg", 
-                    "./img/honda14.jpg", 
-                    "./img/honda15.jpg"],
+            imgSrc:"./img/honda11.jpg", 
             year: 2021
         },
         {
@@ -54,11 +46,7 @@ function Sedan() {
             width: "1800 mm",
             length: "4640 mm",
             color: "Blue",
-            imgSrc:["./img/kia11.jpg", 
-                    "./img/kia12.jpg",
-                    "./img/kia13.jpg", 
-                    "./img/kia14.jpg", 
-                    "./img/kia15.jpg"],
+            imgSrc:"./img/kia11.jpg", 
             year: 2022
         },
         {
@@ -74,11 +62,7 @@ function Sedan() {
             width: "1800 mm",
             length: "4640 mm",
             color: "White",
-            imgSrc:["./img/kia15.jpg", 
-                    "./img/kia17.jpg",
-                    "./img/kia18.jpg", 
-                    "./img/kia19.jpg", 
-                    "./img/kia20.jpg"],
+            imgSrc:"./img/kia15.jpg", 
             year: 2024
         },
         {
@@ -94,11 +78,7 @@ function Sedan() {
             width: "1795 mm",
             length: "4660 mm",
             color: "Red",
-            imgSrc:["./img/mazda01.jpg", 
-                    "./img/mazda02.jpg",
-                    "./img/mazda03.jpg", 
-                    "./img/mazda04.jpg", 
-                    "./img/mazda05.jpg"],
+            imgSrc: "./img/mazda01.jpg", 
             year: 2022
         },
         {
@@ -114,11 +94,7 @@ function Sedan() {
             width: "1840 mm",
             length: "4865 mm",
             color: "White",
-            imgSrc:["./img/mazda16.jpg", 
-                    "./img/mazda17.jpg",
-                    "./img/mazda18.jpg", 
-                    "./img/mazda19.jpg", 
-                    "./img/mazda20.jpg"],
+            imgSrc:"./img/mazda16.jpg", 
             year: 2019
         },
         {
@@ -134,11 +110,7 @@ function Sedan() {
             width: "1933 mm",
             length: "4694 mm",
             color: "White",
-            imgSrc:["./img/tesla06.jpg", 
-                    "./img/tesla07.jpg",
-                    "./img/tesla08.jpg", 
-                    "./img/tesla09.jpg", 
-                    "./img/tesla10.jpg"],
+            imgSrc:"./img/tesla06.jpg", 
             year: 2021
         },
         
@@ -155,11 +127,7 @@ function Sedan() {
             width: "1933 mm",
             length: "4694 mm",
             color: "Black",
-            imgSrc:["./img/tesla11.jpg", 
-                    "./img/tesla12.jpg",
-                    "./img/tesla13.jpg", 
-                    "./img/tesla14.jpg", 
-                    "./img/tesla15.jpg"],
+            imgSrc: "./img/tesla11.jpg", 
             year: 2020
         },
         {
@@ -175,11 +143,7 @@ function Sedan() {
             width: "1964 mm",
             length: "4970 mm",
             color: "Red",
-            imgSrc:["./img/tesla16.jpg", 
-                    "./img/tesla17.jpg",
-                    "./img/tesla18.jpg", 
-                    "./img/tesla19.jpg", 
-                    "./img/tesla20.jpg"],
+            imgSrc: "./img/tesla16.jpg", 
             year: 2022
         },
         {
@@ -195,11 +159,7 @@ function Sedan() {
             width: "1990 mm",
             length: "5070 mm",
             color: "White",
-            imgSrc:["./img/tesla21.jpg", 
-                    "./img/tesla22.jpg",
-                    "./img/tesla23.jpg", 
-                    "./img/tesla24.jpg", 
-                    "./img/tesla25.jpg"], 
+            imgSrc: "./img/tesla21.jpg", 
             year: 2021
         },
         {
@@ -215,11 +175,7 @@ function Sedan() {
             width: "1748 mm",
             length: "4553 mm",
             color: "Red",
-            imgSrc:["./img/honda26.jpg", 
-                    "./img/honda27.jpg",
-                    "./img/honda28.jpg", 
-                    "./img/honda29.jpg", 
-                    "./img/honda30.jpg"],
+            imgSrc: "./img/honda26.jpg", 
             year: 2021
         }
     ]
@@ -255,4 +211,4 @@ function Sedan() {
      );
 }
 
-export default Sedan;
+export default SEDAN;
