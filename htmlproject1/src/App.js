@@ -16,8 +16,8 @@ import Ferrari from './pages/Ferrarri';
 import ContactUs from './pages/ContactUs';
 import Offers from './Offers'
 
-
 function App() {
+
   return (
     <div className="App">
       <nav>
