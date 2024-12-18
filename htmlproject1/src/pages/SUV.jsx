@@ -1,11 +1,11 @@
 
-function SUV() {
-    const suv = [
+function Suv() {
+    const cars = [
         {
             id: "01",
             brand:"Ford",
             name: "Ford Everest Sport 2.0L AT 4x2 2021",
-            model: "SUV",
+            model: "car",
             price: 39000,
             seats: 7,
             fuel: "Diesel",
@@ -25,7 +25,7 @@ function SUV() {
             id: "02",
             brand:"Ford",
             name: "Ford Everest Titanium 2.0L AT 4x2 2021",
-            model: "SUV",
+            model: "car",
             price: 39500,
             seats: 7,
             fuel: "Diesel",
@@ -45,7 +45,7 @@ function SUV() {
             id: "03",
             brand:"Ford",
             name: "Ford Everest Sport 2.0L AT 4x2 2021",
-            model: "SUV",
+            model: "car",
             price: 39000,
             seats: 7,
             fuel: "Diesel",
@@ -85,7 +85,7 @@ function SUV() {
             id: "11",
             brand:"KIA",
             name: "Kia Carens 1.4T SIGNATURE 2023",
-            model: "SUV",
+            model: "car",
             price: 30000,
             seats: 7,
             fuel: "Gasoline",
@@ -105,7 +105,7 @@ function SUV() {
             id: "12",
             brand:"KIA",
             name: "Kia Carens 1.5G LUXURY 2023",
-            model: "SUV",
+            model: "car",
             price: 30000,
             seats: 7,
             fuel: "Gasoline",
@@ -125,7 +125,7 @@ function SUV() {
             id: "20",
             brand:"MAZDA",
             name: "Mazda CX-5 2.0L Premium 2022",
-            model: "SUV",
+            model: "car",
             price: 32000,
             seats: 5,
             fuel: "Gasoline",
@@ -145,7 +145,7 @@ function SUV() {
             id: "32",
             brand:"KIA",
             name: "Kia Sonet 1.5 Premium 2022",
-            model: "SUV",
+            model: "car",
             price: 15000,
             seats: 5,
             fuel: "Gasoline",
@@ -192,4 +192,4 @@ function SUV() {
      );
 }
 
-export default SUV;
+export default Suv;

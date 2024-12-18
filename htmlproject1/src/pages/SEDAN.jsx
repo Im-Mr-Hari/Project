@@ -1,4 +1,3 @@
-import { height, width } from "@mui/system";
 
 function Sedan() {
     const cars =[

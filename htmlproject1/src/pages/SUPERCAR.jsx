@@ -1,4 +1,4 @@
-import { color, height, width } from "@mui/system";
+
 
 function Supercar() {
     const cars = [
