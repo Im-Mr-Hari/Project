@@ -14,7 +14,6 @@ import Mazda from './pages/Mazda';
 import Tesla from './pages/Tesla';
 import Ferrari from './pages/Ferrarri';
 import ContactUs from './pages/ContactUs';
-import Offers from './Offers'
 
 function App() {
 
